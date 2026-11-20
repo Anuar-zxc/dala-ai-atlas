@@ -1,0 +1,79 @@
+@font-face {
+  font-family: Lora;
+  src: url('/fonts/lora-italic.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: italic;
+  font-display: swap;
+}
+.hero h1 em { font-family: Lora, Georgia, serif; font-size: 1em; letter-spacing: -.06em }
+.nav { column-gap: clamp(8px, 1.6vw, 24px) }
+#theme-toggle {
+  display: grid; place-items: center; width: 44px; height: 44px; flex: none;
+  border: 1px solid var(--line); border-radius: 50%; color: var(--atlas-green);
+}
+#theme-toggle:hover { border-color: currentColor }
+.sun, [data-theme=dark] .moon { display: none }
+[data-theme=dark] .sun { display: inline }
+.about-page { max-width: 1290px; padding-bottom: clamp(35px, 5vw, 70px) }
+.about-page .hero p { max-width: 470px; line-height: 1.6; margin-bottom: 0 }
+.about-page .hero .overline { margin: 0 0 15px; color: #ddf69d; font-weight: 700; font-size: 13px }
+.story { display: grid; grid-template-columns: minmax(180px, .75fr) minmax(0,1.5fr); gap: 24px; padding: clamp(26px, 4vw, 58px) 0; border-bottom: 1px solid var(--line) }
+.story h2, .join h2 { font-size: clamp(24px, 2.4vw, 37px); line-height: 1.18; letter-spacing: -.048em }
+.story p, .join p { max-width: 65ch; line-height: 1.75; color: var(--muted) }
+.story p + p, .join p { margin-top: 12px }
+.readers h3 { margin-bottom: 4px; letter-spacing: -.025em }
+.readers p + h3 { margin-top: 22px }
+.credits { font-size: 13px }
+.credits a, nav [aria-current=page] { text-decoration: underline; text-underline-offset: 4px }
+.join { margin-top: 30px; border-radius: 18px; background: #103c39; padding: clamp(22px, 3.5vw, 46px); display: flex; align-items: center; gap: 24px; justify-content: space-between; color: white }
+.join p { color: #d6e7df }
+.join a { flex-shrink: 0 }
+html[data-theme=dark] {
+  color-scheme: dark; --ink: #edf3ed; --paper: #101b1b; --muted: #b4c7bd;
+  --line: #3c5149; --atlas-green: #b4e4c7; --surface: #192927; --field: #203430;
+  --surface-shadow: 0 8px 30px #07131244;
+}
+[data-theme=dark] :is(dialog,.workspace-card,.card,.map-directory,.search,.contacts-filter,.secondary,.pages button,.contact-link) { color: var(--ink); background: var(--surface); border-color: var(--line) }
+[data-theme=dark] :is(nav a,nav button,.eyebrow,.card p,.cardfoot,.profile-share,.profile-section p,.editor-detail .state,.record small,.editor-tabs span:not(:empty)) { color: var(--muted) }
+[data-theme=dark] :is(.map-directory select,#map-search,select,form input,form textarea,.editorial input,.editorial select,.editorial textarea,.close,.editor-tabs,.contact-section) { color-scheme: dark; background: var(--field); border-color: var(--line); color: var(--ink) }
+[data-theme=dark] :is(.hero-link,.map-modes button[aria-pressed=true]) { color: #162d25 }
+[data-theme=dark] :is(.map-catalog,.submit,.add) { background: #d6f48d; color: #132e28 }
+[data-theme=dark] .add span { color: inherit }
+[data-theme=dark] :is(.map-item:hover,.record:hover,.record[aria-pressed=true],.contact-link:hover,.map-item:focus-visible,.editor-tabs button[aria-pressed=true]) { background: #304b40 }
+[data-theme=dark] :is(.atlas,.cardfoot,.record,footer,.atlas-stats div) { border-color: var(--line) }
+[data-theme=dark] .map-list { scrollbar-color: #586e64 var(--surface) }
+[data-theme=dark] .tag { color: #ddedbc; background: #2b4131 }
+[data-theme=dark] .stage-tag { color: #c5ece7; background: #28443f }
+[data-theme=dark] .admin-status[data-error=true], [data-theme=dark] .detail-error { color: #ffb0a5 }
+[data-theme=dark] :focus-visible { outline-color: #d0f489 }
+[data-theme=dark] .skip:focus { background: var(--surface) }
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes arrive { from { opacity: 0; transform: translateY(8px) } to { opacity: 1; transform: none } }
+  @keyframes terrain-in { from { opacity: .5; transform: scale(1.025) } to { opacity: 1; transform: scale(1) } }
+  .hero-copy, dialog[open] { animation: arrive .28s ease-out both }
+  .hero-art { animation: terrain-in 1s ease-out both }
+  .hero-link span, .card, #theme-toggle svg { transition: transform .18s ease-out }
+  .hero-link:hover span { transform: translate(2px,-2px) }
+  #theme-toggle:hover svg { transform: rotate(-12deg) }
+  @media (hover:hover) { .card:hover { transform: translateY(-3px) } }
+}
+@media (max-width: 690px) {
+  .story { grid-template-columns: 1fr; gap: 12px }
+  .join { align-items: start; flex-direction: column }
+  .nav #theme-toggle { margin-left: auto }
+  .nav .add { margin-left: 0 }
+  .about-page .hero { min-height: 355px }
+  .about-page .hero-art { top: 59% }
+}
+@media (max-width: 374px) {
+  .nav { gap: 5px }
+  .nav .brand { font-size: 20px }
+  .nav .brand img { width: 25px; margin-right: 3px }
+  .nav .add { padding-inline: 8px }
+  .nav .add span { display: none }
+}
+@media (max-width: 690px) {
+  .nav:has(nav) { flex-wrap: wrap; padding-top: 8px; row-gap: 0 }
+  .nav nav { order: 1; display: flex; width: 100%; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); margin-top: 7px }
+  .nav nav a { min-height: 44px; display: inline-flex; align-items: center; padding-block: 5px; font-size: 13px }
+}

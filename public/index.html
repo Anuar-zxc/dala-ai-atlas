@@ -6,8 +6,10 @@
   <meta name="theme-color" content="#083333">
   <meta name="description" content="Интерактивная карта ИИ-компаний и проектов Казахстана. Поиск по компаниям, сферам, городам и выпускам nFactorial Incubator.">
   <title>Dala Atlas — карта ИИ-экосистемы Казахстана</title>
+  <script src="/theme.js"></script>
   <link rel="icon" href="/mark.svg">
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/appearance.css">
   <script type="module" src="/app.js"></script>
 </head>
 <body>
@@ -15,7 +17,7 @@
   <header>
     <div class="nav wrap">
       <a class="brand" href="/" aria-label="Dala Atlas, на главную"><img src="/mark.svg" alt="">Dala<span>Atlas</span></a>
-      <nav aria-label="Навигация"><a href="#map">Карта</a><a href="#catalog">Каталог</a><button id="about">О проекте</button></nav>
+      <nav aria-label="Навигация"><a href="#map">Карта</a><a href="#catalog">Каталог</a><a href="/about.html">О проекте</a></nav><button type="button" id="theme-toggle" aria-label="Тёмная тема" title="Тёмная тема" aria-pressed="false"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path class="moon" d="M20 14A8.5 8.5 0 0 1 10 4a8.5 8.5 0 1 0 10 10Z"/><g class="sun"><circle cx="12" cy="12" r="4"/><path d="M12 1v3m0 16v3M1 12h3m16 0h3M4 4l2 2m12 12 2 2M4 20l2-2M18 6l2-2"/></g></svg></button>
       <button class="add" id="add">Добавить стартап <span aria-hidden="true">＋</span></button>
     </div>
   </header>
@@ -71,7 +73,7 @@
       <div class="pages" id="pages" aria-label="Страницы каталога"></div>
     </section>
   </main>
-  <footer class="wrap"><b>Dala Atlas</b><button class="bare" id="about-footer">О проекте и источниках</button><a href="/admin.html">Редакция</a><a href="#map">К карте ↑</a></footer>
+  <footer class="wrap"><b>Dala Atlas</b><a href="/about.html">О проекте и источниках</a><a href="/admin.html">Редакция</a><a href="#map">К карте ↑</a></footer>
   <dialog id="dialog" aria-labelledby="title"><button class="close" aria-label="Закрыть">×</button><div id="content"></div></dialog>
 </body>
 </html>

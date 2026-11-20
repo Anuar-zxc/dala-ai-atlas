@@ -217,11 +217,6 @@ $('pages').onclick = event => {
 };
 for (const id of [...filterIds, 'contacts-only']) $(id).addEventListener('input', () => { currentPage = 1; renderCatalog(); });
 
-function showAbout() {
-  openPanel('<h2 id="title">О проекте</h2><p>Атлас объединяет ИИ-компании казахстанской экосистемы и проекты nFactorial Incubator. Выпуск инкубатора указан в каждой архивной карточке.</p><p>Отметки показывают города, связанные с командами, внедрениями или местом программы. Основание указано в карточке. Некоторые команды связаны с несколькими городами. В режиме «Все проекты» у каждой карточки есть собственная отметка.</p><p>Описание отражает данные в источнике. Сведения о текущей работе архивных проектов могут отсутствовать. Целевая аудитория указана по назначению продукта.</p><p>Границы карты предоставлены Natural Earth. Рельеф Заилийского Алатау построен по данным <a class="terrain-source" href="https://registry.opendata.aws/terrain-tiles/" target="_blank" rel="noopener noreferrer">Terrain Tiles на AWS</a>. Заявки на новые проекты проходят редакторскую проверку.</p>');
-}
-$('about').onclick = showAbout;
-$('about-footer').onclick = showAbout;
 const fields = [
   ['name', 'Название', 100, 'text'], ['url', 'Ссылка на MVP, продукт или демо', 350, 'url'],
   ['sector', 'Сфера', 100, 'text'], ['team', 'Основатели и роли', 350, 'text'],
@@ -281,6 +276,8 @@ $('add').onclick = () => {
     }
   };
 };
+
+if (new URLSearchParams(location.search).get('action') === 'submit') $('add').click();
 
 async function init() {
   const [response, updates] = await Promise.all([
