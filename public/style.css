@@ -53,7 +53,8 @@ h1 { margin: 6px 0 5px; font-size: clamp(37px, 5.15vw, 79px); line-height: 1.02;
 .pin { position: absolute; pointer-events: auto; transform: translate(-50%, -50%); display: grid; justify-items: center; min-width: 44px; min-height: 44px; align-content: center; gap: 2px; padding: 0; color: white; border: 0; isolation: isolate }
 .pin span { min-width: 28px; height: 26px; display: grid; place-items: center; padding: 0 5px; color: #172324; background: var(--lime); border: 1px solid #ecffa1; border-radius: 40px; box-shadow: 0 0 0 4px #def7782b; font: 750 12px/1 var(--mono) }
 .pin b { font-size: clamp(9px, .9vw, 12px); color: #f8faf7; text-shadow: 0 1px 3px #000; white-space: nowrap; position: absolute; top: 35px }
-.pin.program { transform: translate(8px, -92%); z-index: 1 }
+.pin.program { transform: translate(24px, -133%); z-index: 1 }
+.pin.program::before { content: ""; position: absolute; z-index: -1; right: 25px; top: 27px; width: 49px; border-top: 1px dashed #9de2ffb3; transform: rotate(-39deg); transform-origin: right }
 .pin.program span { background: #9de2ff; border-color: #bfebff; box-shadow: 0 0 0 4px #9de2ff33 }
 .pin:hover, .pin[aria-pressed="true"] { z-index: 2 }
 .pin:focus-visible, .pin[aria-pressed="true"] span { outline: 2px solid white; outline-offset: 3px }
@@ -143,7 +144,8 @@ form input, form textarea { width: 100%; display: block; margin-top: 4px; paddin
   .map-key { inset: auto 10px 5px; font-size: 10px }
   .pin span { height: 23px; min-width: 23px; font-size: 10px }
   .pin b { top: 31px }
-  .pin.program { transform: translate(5px, -102%) }
+  .pin.program { transform: translate(14px, -132%) }
+  .pin.program::before { width: 41px; top: 26px }
   .map-directory { grid-template-rows: auto auto 171px auto; border-left: 0; border-top: 1px solid #415452; padding: 12px }
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px }
   .card { padding: 10px }
