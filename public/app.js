@@ -55,6 +55,12 @@ async function init() {
     b.innerHTML='<i></i><b>'+city+'</b>';b.ariaLabel='Показать проекты: '+city;
     b.onclick=()=>{clearFilters();$('city').value=city;render();$('catalog').scrollIntoView();};$('pins').append(b);
   }
+  const unmapped=projects.filter(p=>!p.city).length;
+  if(unmapped) {
+    $('unmapped').hidden=false;
+    $('unmapped').textContent='Без города · '+unmapped+' ↗';
+    $('unmapped').onclick=()=>{clearFilters();$('city').value=unknown;render();$('catalog').scrollIntoView();};
+  }
   $('total').textContent=projects.length;render();
 }
 init().catch(()=>{$('count').textContent='Не удалось загрузить каталог. Обновите страницу.';});
