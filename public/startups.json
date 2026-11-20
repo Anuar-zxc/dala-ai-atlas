@@ -1,0 +1,381 @@
+[
+  {
+    "id": "higgsfield",
+    "name": "Higgsfield",
+    "sector": "Медиа",
+    "description": "Создаёт изображения и видео по сценарию и позволяет управлять движением камеры.",
+    "audience": "Креаторы, киностудии и рекламные агентства",
+    "team": "Alex Mashrabov, Yerzat Dulat, Mahi De Silva",
+    "role": "Сооснователи",
+    "stage": "Series B",
+    "city": "Астана",
+    "geo": "Связь через Astana Hub. Штаб-квартира в Сан-Франциско.",
+    "links": {
+      "Сайт": "https://higgsfield.ai",
+      "Сообщение компании": "https://higgsfield.ai/blog/higgsfield-series-b-extension-tcv-nvidia"
+    },
+    "checked": "2026-11-20",
+    "logo": "logos/higgsfield.webp"
+  },
+  {
+    "id": "cerebra",
+    "name": "CEREBRA",
+    "sector": "Медицина",
+    "description": "Анализирует бесконтрастные КТ-снимки головного мозга, помогая врачам распознавать признаки инсульта.",
+    "audience": "Радиологи, инсультные центры и больницы",
+    "team": "Doszhan Zhussupov",
+    "role": "Основатель",
+    "stage": "Раунд не раскрыт",
+    "city": "Алматы",
+    "geo": "Офис в Алматы указан в профиле компании.",
+    "links": {
+      "Сайт": "https://cerebraai.ai",
+      "LinkedIn": "https://kz.linkedin.com/company/cerebrai",
+      "Основатель": "https://www.linkedin.com/in/doszhan-zhussupov"
+    },
+    "checked": "2026-11-20",
+    "logo": "logos/cerebra.webp"
+  },
+  {
+    "id": "parqour",
+    "name": "Parqour",
+    "sector": "Город",
+    "description": "Распознаёт автомобильные номера, ведёт учёт парковочных сессий и объединяет оплату с аналитикой загрузки.",
+    "audience": "Операторы парковок, аэропорты и торговые центры",
+    "team": "Amirkhan Omarov",
+    "role": "Основатель",
+    "stage": "Коммерческий продукт",
+    "city": "Алматы",
+    "geo": "Компания набирала продуктовую команду в Алматы.",
+    "links": {
+      "LinkedIn": "https://www.linkedin.com/company/parqour",
+      "Основатель": "https://www.linkedin.com/in/amirus",
+      "Команда в Алматы": "https://kz.linkedin.com/jobs/view/3674996275"
+    },
+    "checked": "2026-11-20",
+    "logo": null
+  },
+  {
+    "id": "amplify",
+    "name": "Amplify",
+    "sector": "Маркетинг",
+    "description": "Отслеживает упоминания брендов в ответах ИИ-поисковиков и подсказывает, какие материалы обновить.",
+    "audience": "Маркетологи и владельцы брендов",
+    "team": "Amir Pashayev",
+    "role": "Основатель",
+    "stage": "Выпуск инкубатора · 2026",
+    "city": "",
+    "geo": "Участие в казахстанском nFactorial Incubator 2026. Город не указан.",
+    "links": {
+      "nFactorial": "https://projects.nfactorial.school/",
+      "Репозиторий": "https://github.com/ameer889092827/amplify",
+      "Страница проекта": "https://tryamplify.app"
+    },
+    "checked": "2026-11-20",
+    "logo": "logos/amplify.webp"
+  },
+  {
+    "id": "paletteme",
+    "name": "PaletteMe",
+    "sector": "Мода",
+    "description": "Подбирает палитру, силуэты и сочетания одежды по внешности и предпочтениям человека.",
+    "audience": "Покупатели одежды и любители персонального стиля",
+    "team": "Диляра Вахитова",
+    "role": "Автор проекта",
+    "stage": "Выпуск инкубатора · 2026",
+    "city": "",
+    "geo": "Участие в казахстанском nFactorial Incubator 2026. Город не указан.",
+    "links": {
+      "nFactorial": "https://projects.nfactorial.school/",
+      "Репозиторий": "https://github.com/doaoww/PaletteMe",
+      "Страница проекта": "https://www.paletteme.app/"
+    },
+    "checked": "2026-11-20",
+    "logo": "logos/paletteme.webp"
+  },
+  {
+    "id": "velnox",
+    "name": "Velnox",
+    "sector": "Бизнес",
+    "description": "Разбирает входящую почту по приоритету и предлагает черновики ответов в общем ящике команды.",
+    "audience": "Отделы продаж и клиентской поддержки",
+    "team": "Amirkhan Sagyndyk",
+    "role": "Автор проекта",
+    "stage": "Выпуск инкубатора · 2026",
+    "city": "Астана",
+    "geo": "Город учёбы автора по профилю nFactorial.",
+    "links": {
+      "nFactorial": "https://projects.nfactorial.school/",
+      "Репозиторий": "https://github.com/Amir10202010/flo",
+      "Страница проекта": "https://www.usevelnox.com"
+    },
+    "checked": "2026-11-20",
+    "logo": "logos/velnox.webp"
+  },
+  {
+    "id": "letmecook",
+    "name": "LetMeCook",
+    "sector": "Обучение",
+    "description": "Помогает выбрать блюдо на вечер и объясняет каждый шаг приготовления.",
+    "audience": "Начинающие домашние повара",
+    "team": "Diyar Amanzholov",
+    "role": "Основатель",
+    "stage": "Выпуск инкубатора · 2026",
+    "city": "Рудный",
+    "geo": "Родной город основателя по его профилю.",
+    "links": {
+      "nFactorial": "https://projects.nfactorial.school/",
+      "Репозиторий": "https://github.com/Diyar30under30/letmecook",
+      "Страница проекта": "https://youtu.be/DRlWMjyPVnE?si=YRLIq7nNdeeblbBo"
+    },
+    "checked": "2026-11-20",
+    "logo": "logos/letmecook.webp"
+  },
+  {
+    "id": "whooshly",
+    "name": "Whooshly",
+    "sector": "Медиа",
+    "description": "Генерирует звуковые эффекты по тексту и расставляет их в подходящих моментах ролика.",
+    "audience": "Видеоблогеры и монтажёры",
+    "team": "Aizhan Ibrakhimova",
+    "role": "Основательница",
+    "stage": "Выпуск инкубатора · 2026",
+    "city": "",
+    "geo": "Участие в казахстанском nFactorial Incubator 2026. Город не указан.",
+    "links": {
+      "nFactorial": "https://projects.nfactorial.school/",
+      "Репозиторий": "https://github.com/aizhaki/whooshly",
+      "Страница проекта": "https://whooshly.app"
+    },
+    "checked": "2026-11-20",
+    "logo": "logos/whooshly.webp"
+  },
+  {
+    "id": "rivalscope",
+    "name": "Rivalscope",
+    "sector": "Бизнес",
+    "description": "Следит за изменениями на сайтах конкурентов и собирает аргументы для переговоров с клиентами.",
+    "audience": "Команды продаж и основатели SaaS",
+    "team": "Mansur Zhiger",
+    "role": "Основатель",
+    "stage": "Выпуск инкубатора · 2026",
+    "city": "Алматы",
+    "geo": "Город основателя по его профилю в инкубаторе.",
+    "links": {
+      "nFactorial": "https://projects.nfactorial.school/",
+      "Репозиторий": "https://github.com/IManss-ai/competitor-analyzer.git",
+      "Страница проекта": "https://rivalscope.dev/"
+    },
+    "checked": "2026-11-20",
+    "logo": "logos/rivalscope.webp"
+  },
+  {
+    "id": "grader-ai",
+    "name": "Grader.ai",
+    "sector": "Обучение",
+    "description": "Имитирует секции Speaking и Writing экзамена IELTS и разбирает ответы по критериям оценивания.",
+    "audience": "Учащиеся, готовящиеся к IELTS",
+    "team": "Daniyal Talgatov",
+    "role": "Основатель и CTO",
+    "stage": "Выпуск инкубатора · 2026",
+    "city": "",
+    "geo": "Участие в казахстанском nFactorial Incubator 2026. Город не указан.",
+    "links": {
+      "nFactorial": "https://projects.nfactorial.school/",
+      "Репозиторий": "https://github.com/Danchouvzv/Grader",
+      "Страница проекта": "https://www.tiktok.com/@grader.ai/video/7660213771830316309"
+    },
+    "checked": "2026-11-20",
+    "logo": "logos/grader-ai.webp"
+  },
+  {
+    "id": "hearless",
+    "name": "hearless",
+    "sector": "Доступность",
+    "description": "Создаёт субтитры с помощью ИИ и объединяет материалы по жестовому языку.",
+    "audience": "Глухие и слабослышащие пользователи",
+    "team": "nurdana bimahanbet",
+    "role": "Автор проекта",
+    "stage": "Выпуск инкубатора · 2026",
+    "city": "",
+    "geo": "Участие в казахстанском nFactorial Incubator 2026. Город не указан.",
+    "links": {
+      "nFactorial": "https://projects.nfactorial.school/",
+      "Репозиторий": "https://github.com/heardndb15/hearless16.git",
+      "Страница проекта": "https://hearless16-pcug.vercel.app/"
+    },
+    "checked": "2026-11-20",
+    "logo": "logos/hearless.webp"
+  },
+  {
+    "id": "tokenolo",
+    "name": "tokenolo",
+    "sector": "Разработка",
+    "description": "Сжимает запросы, контекст и результаты вызова инструментов перед отправкой в языковую модель.",
+    "audience": "Разработчики LLM-приложений",
+    "team": "Yernar Merkhanov",
+    "role": "Автор проекта",
+    "stage": "Выпуск инкубатора · 2026",
+    "city": "",
+    "geo": "Участие в казахстанском nFactorial Incubator 2026. Город не указан.",
+    "links": {
+      "nFactorial": "https://projects.nfactorial.school/",
+      "Репозиторий": "https://github.com/merkhanov/tokenolo",
+      "Страница проекта": "https://www.tokenolo.com/"
+    },
+    "checked": "2026-11-20",
+    "logo": "logos/tokenolo.webp"
+  },
+  {
+    "id": "otclick",
+    "name": "Otclick",
+    "sector": "Карьера",
+    "description": "Готовит ответы для анкет работодателей на основе резюме и вакансии. Соискатель проверяет поля перед отправкой.",
+    "audience": "Соискатели",
+    "team": "Nurmukhamed Ashekey",
+    "role": "Основатель",
+    "stage": "Выпуск инкубатора · 2026",
+    "city": "",
+    "geo": "Участие в казахстанском nFactorial Incubator 2026. Город не указан.",
+    "links": {
+      "nFactorial": "https://projects.nfactorial.school/",
+      "Репозиторий": "https://github.com/NurmukhamedKZ/OtclickUS",
+      "Страница проекта": "https://otclick.org"
+    },
+    "checked": "2026-11-20",
+    "logo": "logos/otclick.webp"
+  },
+  {
+    "id": "hooked-ai",
+    "name": "Hooked_ai",
+    "sector": "Маркетинг",
+    "description": "Анализирует короткое видео и объясняет, почему зритель может пролистать ролик.",
+    "audience": "Авторы Reels и SMM-команды",
+    "team": "alina nagashtay",
+    "role": "Автор проекта",
+    "stage": "Выпуск инкубатора · 2026",
+    "city": "",
+    "geo": "Участие в казахстанском nFactorial Incubator 2026. Город не указан.",
+    "links": {
+      "nFactorial": "https://projects.nfactorial.school/",
+      "Репозиторий": "https://github.com/bimogg/Hooked.AI",
+      "Страница проекта": "https://hooked.click"
+    },
+    "checked": "2026-11-20",
+    "logo": "logos/hooked-ai.webp"
+  },
+  {
+    "id": "saywell",
+    "name": "Saywell",
+    "sector": "Карьера",
+    "description": "Адаптирует резюме под вакансию и проводит тренировочное собеседование с обратной связью.",
+    "audience": "Студенты и начинающие специалисты",
+    "team": "Nuray Zhumasseiit",
+    "role": "Автор проекта",
+    "stage": "Выпуск инкубатора · 2026",
+    "city": "",
+    "geo": "Участие в казахстанском nFactorial Incubator 2026. Город не указан.",
+    "links": {
+      "nFactorial": "https://projects.nfactorial.school/",
+      "Репозиторий": "https://github.com/nzhumasseiit/saywell",
+      "Страница проекта": "https://saywell.cv"
+    },
+    "checked": "2026-11-20",
+    "logo": "logos/saywell.webp"
+  },
+  {
+    "id": "linai",
+    "name": "LinAI",
+    "sector": "Маркетинг",
+    "description": "Готовит публикации для LinkedIn с учётом тематики и стиля предыдущих текстов автора.",
+    "audience": "Эксперты и предприниматели",
+    "team": "Sara Medetbekova",
+    "role": "Автор проекта",
+    "stage": "Выпуск инкубатора · 2026",
+    "city": "",
+    "geo": "Участие в казахстанском nFactorial Incubator 2026. Город не указан.",
+    "links": {
+      "nFactorial": "https://projects.nfactorial.school/",
+      "Репозиторий": "https://github.com/medetbekovasara/aicontent_producer.git",
+      "Страница проекта": "https://drive.google.com/drive/folders/1cANti7d1Q7t7FfonL5GilOAEABLRUeaN?usp=share_link"
+    },
+    "checked": "2026-11-20",
+    "logo": null
+  },
+  {
+    "id": "carvin",
+    "name": "Carvin",
+    "sector": "Город",
+    "description": "Объединяет проверку истории автомобиля и помощника по ремонту с компьютерным зрением.",
+    "audience": "Автовладельцы и покупатели машин",
+    "team": "Arsen Anarbek",
+    "role": "Автор проекта",
+    "stage": "Выпуск инкубатора · 2026",
+    "city": "",
+    "geo": "Участие в казахстанском nFactorial Incubator 2026. Город не указан.",
+    "links": {
+      "nFactorial": "https://projects.nfactorial.school/",
+      "Репозиторий": "https://github.com/shalbulov/carvin",
+      "Страница проекта": "https://carvin.app"
+    },
+    "checked": "2026-11-20",
+    "logo": "logos/carvin.webp"
+  },
+  {
+    "id": "lingopro",
+    "name": "LingoPRO",
+    "sector": "Обучение",
+    "description": "Помогает готовиться к языковым экзаменам, включая TOPIK, HSK и TÖMER, с помощью ИИ.",
+    "audience": "Изучающие иностранные языки",
+    "team": "Vadim Obrezkov",
+    "role": "Автор проекта",
+    "stage": "Выпуск инкубатора · 2026",
+    "city": "",
+    "geo": "Участие в казахстанском nFactorial Incubator 2026. Город не указан.",
+    "links": {
+      "nFactorial": "https://projects.nfactorial.school/",
+      "Репозиторий": "https://github.com/LanguagePRO-Kz/lingopro-backup",
+      "Страница проекта": "https://lingopro-pi.vercel.app"
+    },
+    "checked": "2026-11-20",
+    "logo": "logos/lingopro.webp"
+  },
+  {
+    "id": "trendy",
+    "name": "Trendy",
+    "sector": "Медиа",
+    "description": "Стилизует фотографии по шаблонам визуальных трендов, сохраняя сходство с оригиналом.",
+    "audience": "Авторы визуального контента",
+    "team": "Aray Akhylbek",
+    "role": "Автор проекта",
+    "stage": "Выпуск инкубатора · 2026",
+    "city": "",
+    "geo": "Участие в казахстанском nFactorial Incubator 2026. Город не указан.",
+    "links": {
+      "nFactorial": "https://projects.nfactorial.school/",
+      "Репозиторий": "https://github.com/arayakhylbek/trendy-app.git",
+      "Страница проекта": "https://drive.google.com/drive/folders/11UH6bNQqp5hJgTxBPYEpp9c_ThdJRWBj?usp=sharing"
+    },
+    "checked": "2026-11-20",
+    "logo": "logos/trendy.webp"
+  },
+  {
+    "id": "korvi",
+    "name": "Korvi",
+    "sector": "Маркетинг",
+    "description": "Объединяет инструменты ИИ-маркетинга для продвижения продукта.",
+    "audience": "Основатели и малый бизнес",
+    "team": "Yerkhan Nurulla",
+    "role": "Основатель",
+    "stage": "Выпуск инкубатора · 2026",
+    "city": "",
+    "geo": "Участие в казахстанском nFactorial Incubator 2026. Город не указан.",
+    "links": {
+      "nFactorial": "https://projects.nfactorial.school/",
+      "Репозиторий": "https://github.com/yerkonty/grunt",
+      "Страница проекта": "https://korvi.studio/"
+    },
+    "checked": "2026-11-20",
+    "logo": "logos/korvi.webp"
+  }
+]
