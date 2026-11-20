@@ -199,3 +199,7 @@ form input, form textarea { width: 100%; display: block; margin-top: 4px; paddin
   .pin[data-city="Алматы"] b, .pin[data-city="Астана"] b, .pin[data-city="Шымкент"] b,
   .pin[aria-pressed="true"] b, .pin:focus-visible b { display: block }
 }
+.pin b { pointer-events: none }
+@media (max-width: 690px) {
+  .pin[data-city="Караганда"] { transform: translate(-23%, -20%) }
+}
