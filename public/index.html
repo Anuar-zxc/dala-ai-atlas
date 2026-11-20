@@ -30,13 +30,24 @@
     </div>
     <section class="atlas" id="map" aria-label="Интерактивная карта проектов">
       <div class="atlas-map">
+        <div class="map-modes" aria-label="Вид карты">
+          <button type="button" id="view-cities" aria-pressed="true" aria-controls="city-view">По городам</button>
+          <button type="button" id="view-projects" aria-pressed="false" aria-controls="project-view">Все проекты</button>
+        </div>
+        <div id="city-view">
         <div class="map-heading"><div><span class="coordinates">48° N / 68° E</span><h2>Казахстан</h2></div><span class="north" aria-label="Север">↑ N</span></div>
         <div class="map-frame"><img src="/map.svg" alt="Контурная карта Казахстана и соседних стран"><div class="pins" id="pins"></div></div>
-        <div class="map-key"><span><i></i> Город команды</span><span><i class="program"></i> Место инкубатора</span><button class="country-group" id="country-group" hidden></button></div>
+        <div class="map-key"><span><i></i> Проекты, связанные с городом</span><button class="country-group" id="country-group" hidden></button></div>
+        </div>
+        <div id="project-view" class="project-view" hidden>
+          <p id="project-view-count" role="status"></p>
+          <div class="project-grid" id="project-grid" aria-label="Отметки отдельных проектов"></div>
+        </div>
       </div>
       <aside class="map-directory">
         <label for="map-group">Проекты на карте</label>
         <select id="map-group" aria-label="Выбрать отметку на карте"><option value="all">Все проекты</option></select>
+        <input type="search" id="map-search" placeholder="Найти проект" aria-label="Поиск по карте">
         <div class="map-list" id="map-list" aria-label="Карточки на карте" tabindex="0"></div>
         <button id="map-catalog" class="map-catalog">Открыть в каталоге <span aria-hidden="true">↗</span></button>
       </aside>

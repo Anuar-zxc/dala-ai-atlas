@@ -42,10 +42,10 @@ h1 { margin: 6px 0 5px; font-size: clamp(37px, 5.15vw, 79px); line-height: 1.02;
 .atlas-stats strong { font: 750 clamp(27px, 3.5vw, 50px)/1.05 Inter, Arial, sans-serif; letter-spacing: -.075em }
 .atlas-stats span { color: var(--muted); font-size: 12px; margin-top: 4px }
 .atlas { display: grid; grid-template-columns: minmax(0, 1fr) minmax(272px, .38fr); border-radius: 17px; overflow: hidden; background: var(--map); color: #f6f8f3 }
-.atlas-map { position: relative; min-width: 0; padding: 0 10px }
+.atlas-map { position: relative; min-width: 0; padding: 46px 10px 0 }
 .map-frame { position: relative; max-width: 875px; margin-inline: auto }
 .map-frame img { width: 100%; display: block }
-.map-heading { position: absolute; inset: 19px 22px auto; display: flex; align-items: start; justify-content: space-between; z-index: 1; pointer-events: none }
+.map-heading { position: absolute; inset: 61px 22px auto; display: flex; align-items: start; justify-content: space-between; z-index: 1; pointer-events: none }
 .map-heading h2 { font-size: clamp(19px, 3vw, 44px); line-height: 1; letter-spacing: -.06em; margin-top: 3px }
 .coordinates, .north { color: #aec2bc; font: 11px/1.3 var(--mono) }
 .north { border: 1px solid #57706b; border-radius: 50%; width: 36px; height: 36px; display: grid; place-items: center }
@@ -53,16 +53,12 @@ h1 { margin: 6px 0 5px; font-size: clamp(37px, 5.15vw, 79px); line-height: 1.02;
 .pin { position: absolute; pointer-events: auto; transform: translate(-50%, -50%); display: grid; justify-items: center; min-width: 44px; min-height: 44px; align-content: center; gap: 2px; padding: 0; color: white; border: 0; isolation: isolate }
 .pin span { min-width: 28px; height: 26px; display: grid; place-items: center; padding: 0 5px; color: #172324; background: var(--lime); border: 1px solid #ecffa1; border-radius: 40px; box-shadow: 0 0 0 4px #def7782b; font: 750 12px/1 var(--mono) }
 .pin b { font-size: clamp(9px, .9vw, 12px); color: #f8faf7; text-shadow: 0 1px 3px #000; white-space: nowrap; position: absolute; top: 35px }
-.pin.program { transform: translate(24px, -133%); z-index: 1 }
-.pin.program::before { content: ""; position: absolute; z-index: -1; right: 25px; top: 27px; width: 49px; border-top: 1px dashed #9de2ffb3; transform: rotate(-39deg); transform-origin: right }
-.pin.program span { background: #9de2ff; border-color: #bfebff; box-shadow: 0 0 0 4px #9de2ff33 }
 .pin:hover, .pin[aria-pressed="true"] { z-index: 2 }
 .pin:focus-visible, .pin[aria-pressed="true"] span { outline: 2px solid white; outline-offset: 3px }
 .map-key { position: absolute; inset: auto 20px 12px; display: flex; gap: 13px; flex-wrap: wrap; pointer-events: none; font-size: 11px; color: #dce6e1 }
 .map-key span { display: inline-flex; align-items: center; gap: 5px }
 .map-key i { width: 8px; height: 8px; border-radius: 100%; background: var(--lime) }
-.map-key .program { background: #9de2ff }
-.map-directory { background: #121f22; padding: 20px; display: grid; gap: 9px; grid-template-rows: auto auto minmax(160px, 1fr) auto; border-left: 1px solid #415452; min-width: 0 }
+.map-directory { background: #121f22; padding: 20px; display: grid; gap: 9px; grid-template-rows: auto auto auto minmax(160px, 1fr) auto; border-left: 1px solid #415452; min-width: 0 }
 .map-directory label { font-weight: 700; font-size: 18px; letter-spacing: -.025em }
 .map-directory select { color-scheme: dark; color: white; background: #223337; border-color: #4a605b; width: 100% }
 .map-list { height: 0; min-height: 100%; overflow-y: auto; scrollbar-color: #6c837a #18282a; margin-inline: -5px; padding-inline: 5px }
@@ -120,7 +116,7 @@ form input, form textarea { width: 100%; display: block; margin-top: 4px; paddin
 .skip:focus { left: 12px; top: 8px; z-index: 4; background: white; padding: 7px }
 @media (max-width: 970px) {
   .wrap { padding-inline: 22px }
-  .map-heading { inset: 12px 15px auto }
+  .map-heading { inset: 58px 15px auto }
   .atlas-map { align-content: center }
   .atlas-stats { gap: 9px }
   .filters { flex-wrap: wrap }
@@ -138,15 +134,13 @@ form input, form textarea { width: 100%; display: block; margin-top: 4px; paddin
   .atlas-stats { gap: 15px }
   .atlas { grid-template-columns: 1fr }
   .atlas-map { padding: 21px 5px 15px }
-  .map-heading { inset: 6px 10px auto }
+  .map-heading { inset: 55px 10px auto }
   .coordinates { font-size: 9px }
   .north { width: 29px; height: 29px }
   .map-key { inset: auto 10px 5px; font-size: 10px }
   .pin span { height: 23px; min-width: 23px; font-size: 10px }
   .pin b { top: 31px }
-  .pin.program { transform: translate(14px, -132%) }
-  .pin.program::before { width: 41px; top: 26px }
-  .map-directory { grid-template-rows: auto auto 171px auto; border-left: 0; border-top: 1px solid #415452; padding: 12px }
+  .map-directory { grid-template-rows: auto auto auto 171px auto; border-left: 0; border-top: 1px solid #415452; padding: 12px }
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px }
   .card { padding: 10px }
   .card h3 { font-size: 19px }
@@ -172,4 +166,36 @@ form input, form textarea { width: 100%; display: block; margin-top: 4px; paddin
   .country-group { min-height: 44px; padding-inline: 4px; font-size: 9px }
   .pin[data-city="Тараз"] { transform: translate(-7%, -73%) }
   .pin[data-city="Шымкент"] { transform: translate(-80%, -48%) }
+}
+
+.map-modes { position: absolute; z-index: 3; inset: 10px 16px auto; display: flex; gap: 4px; width: max-content; padding: 2px; border: 1px solid #49645e; border-radius: 9px; background: #162629 }
+.map-modes button { min-height: 38px; border: 0; border-radius: 6px; color: #d6e3dc; padding: 4px 11px; font-size: 13px; font-weight: 650 }
+.map-modes button[aria-pressed="true"] { background: #d3f268; color: #18272a }
+#map-search { width: 100%; padding: 8px 10px; min-height: 44px; border: 1px solid #4a605b; border-radius: 8px; background: #223337; color: #f4f8f3; font-size: 14px }
+#map-search::placeholder { color: #c4d3cd }
+.map-empty { padding-block: 11px; color: #bdcbca; font-size: 14px }
+.project-view { padding: 18px 12px; min-height: 380px }
+.project-view p { padding-bottom: 12px; color: #d2e3db; font: 12px/1.4 var(--mono) }
+.project-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(44px, 1fr)); gap: 5px; max-height: 423px; overflow: auto; padding: 4px; scrollbar-color: #6c837a #18282a }
+.map-project { display: grid; place-items: center; min-height: 44px; border: 1px solid #4a605b; border-radius: 8px; background: #243a3b }
+.map-project:hover, .map-project:focus-visible { border-color: #d3f268; background: #46603e }
+.map-project .logo { width: 30px; height: 30px; border-radius: 5px; font-size: 11px }
+.pin[data-city="Рудный"] { transform: translate(-99%, -20%) }
+.pin[data-city="Костанай"] { transform: translate(3%, -88%) }
+.pin[data-city="Кокшетау"] { transform: translate(-72%, -26%) }
+.pin[data-city="Талдыкорган"] { transform: translate(1%, -80%) }
+@media (max-width: 690px) {
+  .atlas-map { padding-top: 91px; align-content: start }
+  .map-frame { margin-top: -24px }
+  .map-modes { inset: 7px 9px auto }
+  .map-modes button { min-height: 40px }
+  .map-heading { z-index: 0 }
+  .map-heading h2 { font-size: 19px }
+  .map-directory label { font-size: 16px }
+  .project-view { margin-top: -35px; padding: 8px 5px; min-height: 0 }
+  .project-grid { max-height: 265px }
+  .pin { min-width: 36px; min-height: 36px }
+  .pin b { display: none; top: 26px }
+  .pin[data-city="Алматы"] b, .pin[data-city="Астана"] b, .pin[data-city="Шымкент"] b,
+  .pin[aria-pressed="true"] b, .pin:focus-visible b { display: block }
 }

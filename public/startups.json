@@ -1,5 +1,81 @@
 [
   {
+    "id": "puls-ai",
+    "name": "PULS AI",
+    "city": "Шымкент",
+    "sector": "Медицина",
+    "description": "Проверяет медицинские записи и выписные эпикризы на соответствие клиническим протоколам и нормативным требованиям.",
+    "audience": "Поликлиники, больницы и службы контроля качества",
+    "team": "Жамшид Арипов, Хуршид Арипов",
+    "role": "Сооснователи Puls Systems",
+    "stage": "Коммерческое внедрение",
+    "geo": "Шымкент — город команды или проекта по указанному источнику.",
+    "links": {
+      "Профиль Astana Hub": "https://astanahub.com/account/v2/company/15040/profile/activity/",
+      "Город и внедрение": "https://www.gov.kz/org/almobl-tehnologiya/press/news/details/1273494?lang=ru",
+      "Сооснователи": "https://kazpravda.kz/n/pomoshchnik-vracha/"
+    },
+    "checked": "2026-11-20",
+    "logo": null,
+    "kind": "company",
+    "aliases": [
+      "Pulse AI",
+      "Пульс ИИ"
+    ]
+  },
+  {
+    "id": "qaztracker",
+    "name": "QazTracker",
+    "city": "Шымкент",
+    "sector": "Промышленность",
+    "description": "Соединяет GPS-трекеры и камеры с компьютерным зрением, чтобы отслеживать скот и оценивать вес животных без ручного взвешивания.",
+    "audience": "Фермеры, животноводческие хозяйства и откормочные площадки",
+    "team": "Динар Бенсеитов, Мирас Турсуналиев",
+    "role": "Сооснователи",
+    "stage": "Коммерческий продукт",
+    "geo": "Компания указывает Шымкент на официальном сайте.",
+    "links": {
+      "Сайт": "https://www.qaztracker.com/ru",
+      "Интервью команды": "https://digitalbusiness.kz/2025-09-04/v-kazahstane-ukrali-zhivotnih-na-milliard-dollarov-aytishniki-nashli-reshenie/"
+    },
+    "checked": "2026-11-20",
+    "logo": "logos/qaztracker.webp",
+    "kind": "company",
+    "aliases": [
+      "Qaztrecker",
+      "Казтрекер"
+    ]
+  },
+  {
+    "id": "alaqan",
+    "name": "Alaqan",
+    "city": "Астана",
+    "sector": "Право и идентификация",
+    "description": "Распознаёт человека по рисунку вен ладони для контроля доступа и бесконтактных платежей.",
+    "audience": "Школы, банки и организации с системами контроля доступа",
+    "team": "Берик Нурымбетов, Александр Мосин, Канат Сарсенбаев, Айгазы Жунисбек",
+    "role": "Сооснователи по интервью",
+    "stage": "Коммерческий продукт",
+    "geo": "Астана — офис по сайту компании. Шымкент — город технической команды по интервью основателя и площадка пилотных внедрений. Алматы — команда развития бизнеса по тому же интервью.",
+    "links": {
+      "Сайт и команда": "https://alaqan.com/about",
+      "Пилот в Шымкенте": "https://www.gov.kz/org/shymkent/documents/details/1071144?lang=kk",
+      "География команды": "https://weproject.media/articles/detail/biznes-keys-berik-nurymbetov-o-tom-kak-sozdat-uspeshnyy-startap-v-sfere-iskusstvennogo-intellekta/",
+      "Сооснователи": "https://forbes.kz/articles/bratya_pokrovi_1702523533"
+    },
+    "checked": "2026-11-20",
+    "logo": "logos/alaqan.webp",
+    "kind": "company",
+    "alsoCities": [
+      "Шымкент",
+      "Алматы"
+    ],
+    "aliases": [
+      "Алақан",
+      "Алакан"
+    ]
+  },
+  {
     "id": "higgsfield",
     "name": "Higgsfield",
     "sector": "Медиа",
@@ -28,15 +104,19 @@
     "role": "Основатель",
     "stage": "Раунд не раскрыт",
     "city": "Алматы",
-    "geo": "Офис в Алматы указан в профиле компании.",
+    "geo": "Офис в Алматы указан в профиле компании. В Шымкенте продукт внедрили в городской больнице №2.",
     "links": {
       "Сайт": "https://cerebraai.ai",
       "LinkedIn": "https://kz.linkedin.com/company/cerebrai",
-      "Основатель": "https://www.linkedin.com/in/doszhan-zhussupov"
+      "Основатель": "https://www.linkedin.com/in/doszhan-zhussupov",
+      "Внедрение в Шымкенте": "https://primeminister.kz/news/reviews/ekonomikalyk-osim-investiciia-tartu-adami-kapitaldy-damytu-kolaily-orta-kalyptastyru-symkent-kalasynyn-damuy-31222"
     },
     "checked": "2026-11-20",
     "logo": "logos/cerebra.webp",
-    "kind": "company"
+    "kind": "company",
+    "alsoCities": [
+      "Шымкент"
+    ]
   },
   {
     "id": "parqour",
@@ -57,6 +137,329 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/parqour.webp",
+    "kind": "company"
+  },
+  {
+    "id": "teriai",
+    "name": "TeriAI",
+    "city": "Караганда",
+    "sector": "Медицина",
+    "description": "Помогает врачам анализировать дерматоскопические снимки новообразований кожи.",
+    "audience": "Дерматологи и медицинские организации",
+    "team": "Тимур Бекеев, Дмитрий Гнейдин, Павел Ильин",
+    "role": "Команда проекта",
+    "stage": "Пилот и подготовка к коммерциализации",
+    "geo": "Разработчики из Караганды по публикации регионального управления цифровизации.",
+    "links": {
+      "Команда, город и продукт": "https://www.gov.kz/org/karaganda-digital/press/news/details/1258377"
+    },
+    "checked": "2026-11-20",
+    "logo": null,
+    "kind": "company"
+  },
+  {
+    "id": "cortexai",
+    "name": "CortexAI",
+    "city": "Кызылорда",
+    "sector": "Медицина",
+    "description": "Разрабатывает систему поддержки клинических решений для оценки риска отторжения донорской почки.",
+    "audience": "Трансплантологи и профильные центры",
+    "team": "Асылжан Абдуллаев",
+    "role": "Основатель и CEO",
+    "stage": "Выпускник Startup Orda",
+    "geo": "Проект Kyzylorda Hub и финалист от Кызылорды. Разработчики учились в Astana IT University.",
+    "links": {
+      "Kyzylorda Hub и продукт": "https://korkyt.edu.kz/ru/article/2432",
+      "Основатель": "https://www.youtube.com/watch?v=guLibcvKNlA",
+      "Результаты конкурса": "https://www.gov.kz/org/maidd/press/news/details/1189012?lang=ru",
+      "Команда и технология": "https://www.gov.kz/org/sci/press/news/details/1310030?lang=ru"
+    },
+    "checked": "2026-11-20",
+    "logo": null,
+    "kind": "company",
+    "alsoCities": [
+      "Астана"
+    ]
+  },
+  {
+    "id": "aitomaton",
+    "name": "aitomaton",
+    "city": "Костанай",
+    "sector": "Голос и поддержка",
+    "description": "Встраивает ИИ-агентов в обслуживание клиентов, продажи и коммуникации сотрудников.",
+    "audience": "Малый и средний бизнес",
+    "team": "Нет сведений",
+    "role": "Команда",
+    "stage": "Коммерческий продукт",
+    "geo": "Костанай — город команды или проекта по указанному источнику.",
+    "links": {
+      "Сайт": "https://aitomaton.online/ru",
+      "Digital Qazaqstan Battle": "https://www.gov.kz/memleket/entities/maidd/press/news/details/1181123?lang=ru"
+    },
+    "checked": "2026-11-20",
+    "logo": null,
+    "kind": "company"
+  },
+  {
+    "id": "jolscan",
+    "name": "JolScan",
+    "city": "Караганда",
+    "sector": "Город и транспорт",
+    "description": "Анализирует изображения с камер для обнаружения дорожных дефектов и передачи информации городским службам.",
+    "audience": "Дорожные службы и акиматы",
+    "team": "Нет сведений",
+    "role": "Команда",
+    "stage": "Финалист Digital Qazaqstan Battle",
+    "geo": "Караганда — город команды или проекта по указанному источнику.",
+    "links": {
+      "Город": "https://www.gov.kz/memleket/entities/maidd/press/news/details/1181123?lang=ru",
+      "Описание технологии": "https://dulaty.edu.kz/images/gilim/stud-gilim/sbornik-konfer-nurumov.pdf"
+    },
+    "checked": "2026-11-20",
+    "logo": null,
+    "kind": "company"
+  },
+  {
+    "id": "saneduportal",
+    "name": "SanEduPortal",
+    "city": "Семей",
+    "sector": "Обучение",
+    "description": "Проводит дистанционное гигиеническое обучение с выдачей сертификатов. Университет Семей описывает проект как образовательную ИИ-платформу.",
+    "audience": "Работники, которым требуется профессиональное гигиеническое обучение",
+    "team": "Максат Джетенбаев",
+    "role": "Автор",
+    "stage": "Работающий продукт",
+    "geo": "Семей — город команды или проекта по указанному источнику.",
+    "links": {
+      "Сайт": "https://sanminimum.kz/ru/about",
+      "Медицинский университет Семей": "https://smu.edu.kz/ru/2025/06/13/silnaya-regionalnaya-nauka-silnyy-region/",
+      "Акимат Семея": "https://t.me/s/semeyakimdigi?before=20768"
+    },
+    "checked": "2026-11-20",
+    "logo": "logos/saneduportal.webp",
+    "kind": "company"
+  },
+  {
+    "id": "heartwave-semey",
+    "name": "HeartWave",
+    "city": "Семей",
+    "sector": "Медицина",
+    "description": "Использует ИИ для автоматизированной расшифровки ЭКГ.",
+    "audience": "Медицинские организации и специалисты, работающие с ЭКГ",
+    "team": "Медицинский университет Семей",
+    "role": "Команда по источнику",
+    "stage": "Представленная разработка",
+    "geo": "Семей — город команды или проекта по указанному источнику.",
+    "links": {
+      "Университет и технология": "https://smu.edu.kz/ru/2025/06/13/silnaya-regionalnaya-nauka-silnyy-region/"
+    },
+    "checked": "2026-11-20",
+    "logo": null,
+    "kind": "company"
+  },
+  {
+    "id": "shakarim-ai-check",
+    "name": "Shakarim AI Check",
+    "city": "Семей",
+    "sector": "Обучение",
+    "description": "Анализирует структуру, аргументацию и язык студенческих работ и возвращает отчёт с рекомендациями.",
+    "audience": "Преподаватели и вузы",
+    "team": "Shakarim University",
+    "role": "Команда",
+    "stage": "Университетский продукт",
+    "geo": "Семей — город команды или проекта по указанному источнику.",
+    "links": {
+      "Сайт": "https://aicheck.shakarim.kz/",
+      "Город и проект": "https://shakarim.university/en/news/shakarim-ai-check-zobasy-zenimpaz-atandy"
+    },
+    "checked": "2026-11-20",
+    "logo": null,
+    "kind": "company"
+  },
+  {
+    "id": "jetiertegi",
+    "name": "JetiErtegi",
+    "city": "Талдыкорган",
+    "sector": "Медиа",
+    "description": "Генерирует персонализированные детские сказки на казахском, иллюстрации и озвучку.",
+    "audience": "Дети, семьи и преподаватели казахского языка",
+    "team": "Аяулым Нуртай, Назым Шайзат",
+    "role": "Авторы",
+    "stage": "Запущенный проект",
+    "geo": "Талдыкорган — город команды или проекта по указанному источнику.",
+    "links": {
+      "Интервью": "https://forbes.kz/articles/shkolnitsy-iztaldykorgana-sozdali-ii-platformu-kazahskih-skazok",
+      "Технология и роли": "https://egemen.kz/article/416828-taldyqorghandyq-oqushylar-qazaq-ertegilerine-arnalghan-zhi-platforma-zhasap-shyg"
+    },
+    "checked": "2026-11-20",
+    "logo": null,
+    "kind": "company"
+  },
+  {
+    "id": "help-hand",
+    "name": "Help Hand",
+    "city": "Талдыкорган",
+    "sector": "Доступность",
+    "description": "Разрабатывает инструмент для общения с носителями жестового языка.",
+    "audience": "Глухие и слабослышащие пользователи и их собеседники",
+    "team": "Ерасыл Санақ, Рамазан Омиргали и команда",
+    "role": "Публично указанные участники",
+    "stage": "Финалист Digital Qazaqstan Battle",
+    "geo": "Талдыкорган — город команды или проекта по указанному источнику.",
+    "links": {
+      "Jetisu Digital": "https://astanahub.com/ru/event/jetisu-digital-vibe-coding-sozdanie-it-produktov-s-pomoshchiu-ai/",
+      "Описание проекта": "https://taldykorgan-online.kz/?p=26410&lang=ru",
+      "Город": "https://www.gov.kz/memleket/entities/maidd/press/news/details/1181123?lang=ru"
+    },
+    "checked": "2026-11-20",
+    "logo": null,
+    "kind": "company"
+  },
+  {
+    "id": "tusin",
+    "name": "TUSIN",
+    "city": "Кокшетау",
+    "sector": "Доступность",
+    "description": "Разрабатывает ИИ-инструменты двустороннего общения между слышащими и носителями жестового языка.",
+    "audience": "Носители жестового языка и их собеседники",
+    "team": "Нет сведений",
+    "role": "Команда",
+    "stage": "Победитель Demo Day Startup Orda",
+    "geo": "Кокшетау — город команды или проекта по указанному источнику.",
+    "links": {
+      "Демо и город": "https://kokshetv.kz/ru/news/41622"
+    },
+    "checked": "2026-11-20",
+    "logo": null,
+    "kind": "company"
+  },
+  {
+    "id": "januya",
+    "name": "Januya",
+    "city": "Кокшетау",
+    "sector": "Промышленность",
+    "description": "Камера и тепловизор собирают данные в птичнике, а ИИ ищет признаки, требующие внимания фермера.",
+    "audience": "Птицефабрики и фермеры",
+    "team": "Команда НИШ Кокшетау",
+    "role": "Авторы",
+    "stage": "Прототип",
+    "geo": "Кокшетау — город команды или проекта по указанному источнику.",
+    "links": {
+      "Профиль проекта": "https://transfornation.kz/futureinnovators/januya"
+    },
+    "checked": "2026-11-20",
+    "logo": null,
+    "kind": "company"
+  },
+  {
+    "id": "um-ai",
+    "name": "UM.AI",
+    "city": "Актобе",
+    "sector": "Бизнес",
+    "description": "Объединяет данные компании в одном чат-интерфейсе, где сотрудники могут задавать вопросы.",
+    "audience": "Корпоративные команды",
+    "team": "Нет сведений",
+    "role": "Команда",
+    "stage": "Выпускник Startup Orda",
+    "geo": "Актобе — город команды или проекта по указанному источнику.",
+    "links": {
+      "Итоги программы": "https://semipalatinsk.alfa.kz/node/13633/ot_idei_do_mvp_kak_startup_orda_vivela_200_regionalnih_startapov_na_noviy_uroven"
+    },
+    "checked": "2026-11-20",
+    "logo": null,
+    "kind": "company"
+  },
+  {
+    "id": "opm-solutions",
+    "name": "OPM Solutions",
+    "city": "Атырау",
+    "sector": "Промышленность",
+    "description": "Анализирует поступающие данные, чтобы вовремя выявлять потенциальные проблемы на трубопроводах.",
+    "audience": "Операторы трубопроводов и инженеры по безопасности",
+    "team": "AI HUB, Utebayev University",
+    "role": "Команда",
+    "stage": "Конкурсный проект",
+    "geo": "Атырау — город команды или проекта по указанному источнику.",
+    "links": {
+      "Проект Utebayev University": "https://atpress.kz/ru/news/v-atyrau/atyrauskie-studenty-stali-prizjorami-respublikanskogo-konkursa-startapov"
+    },
+    "checked": "2026-11-20",
+    "logo": null,
+    "kind": "company"
+  },
+  {
+    "id": "digital-buddy-atyrau",
+    "name": "Digital Buddy",
+    "city": "Атырау",
+    "sector": "Бизнес",
+    "description": "Отвечает на вопросы новых сотрудников и помогает ориентироваться во внутренних процессах.",
+    "audience": "Новые сотрудники и HR-команды",
+    "team": "Prompt, Атырауский университет им. Х. Досмухамедова",
+    "role": "Команда",
+    "stage": "Победитель трека KMG Digital Hackathon",
+    "geo": "Атырау — город команды или проекта по указанному источнику.",
+    "links": {
+      "Министерство энергетики": "https://www.gov.kz/memleket/entities/energo/press/news/details/1239828?lang=ru"
+    },
+    "checked": "2026-11-20",
+    "logo": null,
+    "kind": "company"
+  },
+  {
+    "id": "ar-sana",
+    "name": "AR Sana",
+    "city": "Астана",
+    "sector": "Медицина",
+    "description": "Предлагает игровые упражнения для развития детской речи и инструменты для родителей и логопедов.",
+    "audience": "Дети с речевыми трудностями, родители и логопеды",
+    "team": "Айнур Нурадил",
+    "role": "CEO",
+    "stage": "Призёр Digital Qazaqstan Battle",
+    "geo": "Астана — город команды или проекта по указанному источнику.",
+    "links": {
+      "Анонс финалистов": "https://www.gov.kz/memleket/entities/maidd/press/news/details/1181123?lang=ru",
+      "Продукт и CEO": "https://www.gov.kz/org/maidd/press/news/details/1189012?lang=ru",
+      "Применение ИИ": "https://digitalbusiness.kz/2026-03-27/pobediteli-digital-qazaqstan-battle-poluchili-19-mln-tenge/"
+    },
+    "checked": "2026-11-20",
+    "logo": null,
+    "kind": "company"
+  },
+  {
+    "id": "gro-now",
+    "name": "Gro.now",
+    "city": "Алматы",
+    "sector": "Маркетинг",
+    "description": "Использует ИИ для подготовки маркетинговых исследований и анализа рынка.",
+    "audience": "Маркетологи и исследовательские команды",
+    "team": "Нет сведений",
+    "role": "Команда",
+    "stage": "Победитель Digital Qazaqstan Battle",
+    "geo": "Алматы — город команды или проекта по указанному источнику.",
+    "links": {
+      "Результаты": "https://www.gov.kz/org/maidd/press/news/details/1189012?lang=ru",
+      "Описание продукта": "https://digitalbusiness.kz/2026-03-27/pobediteli-digital-qazaqstan-battle-poluchili-19-mln-tenge/"
+    },
+    "checked": "2026-11-20",
+    "logo": null,
+    "kind": "company"
+  },
+  {
+    "id": "ai-fitting-sko",
+    "name": "ИИ-примерочная Артёма Анохина",
+    "city": "Петропавловск",
+    "sector": "Потребительские сервисы",
+    "description": "Показывает, как вещь из интернет-магазина будет выглядеть на покупателе по двум фотографиям.",
+    "audience": "Интернет-магазины одежды и их покупатели",
+    "team": "Артём Анохин",
+    "role": "Автор",
+    "stage": "Прототип Startup Orda 2.0",
+    "geo": "Петропавловск — региональная площадка SKO Hub, где представлен проект.",
+    "links": {
+      "Интервью на Demo Day": "https://sko24.kz/ru/article/142-zayavki-i-15-finalistov-v-petropavlovske-proshyol-final-startup-orda-20"
+    },
+    "checked": "2026-11-20",
+    "logo": null,
     "kind": "company"
   },
   {
@@ -5182,12 +5585,13 @@
     "description": "Переносит рукописные записи в цифровой формат и помогает проверять решения.",
     "team": "Айнур Нурадил",
     "role": "Команда по источнику",
-    "stage": "Стадия не указана",
+    "stage": "Приз зрителей Digital Qazaqstan Battle",
     "city": "Шымкент",
     "geo": "Город, связанный с командой по профилю Startup Radar: Шымкент.",
     "links": {
       "Startup Radar": "https://raem.kz/startup/qalam-ai/",
-      "Сайт": "https://qalamai.kz/"
+      "Сайт": "https://qalamai.kz/",
+      "Digital Qazaqstan Battle": "https://www.gov.kz/org/maidd/press/news/details/1189012?lang=ru"
     },
     "checked": "2026-11-20",
     "logo": "logos/radar-qalam-ai.webp",

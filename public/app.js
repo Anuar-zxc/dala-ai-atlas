@@ -10,6 +10,8 @@ const locations = {
   'Павлодар': [76.95, 52.29], 'Рудный': [63.12, 52.97], 'Семей': [80.23, 50.41],
   'Талдыкорган': [78.37, 45.02], 'Тараз': [71.37, 42.9], 'Уральск': [51.37, 51.23],
   'Усть-Каменогорск': [82.61, 49.95], 'Шымкент': [69.6, 42.32],
+  'Петропавловск': [69.15, 54.87], 'Конаев': [77.07, 43.88],
+  'Туркестан': [68.25, 43.30], 'Жезказган': [67.71, 47.78],
 };
 const dialog = $('dialog');
 const filterIds = ['query', 'sector', 'city', 'batch'];
@@ -55,36 +57,36 @@ function profile(project) {
       escape(label) + ' ↗</a>').join('') + '</div>');
 }
 
-function groupKey(project) {
-  if (project.city && locations[project.city]) return 'city:' + project.city;
-  if (project.programCity && locations[project.programCity]) return 'program:' + project.programCity;
-  return 'unknown';
+function projectCities(project) {
+  const cities = [project.city || project.programCity, ...(project.alsoCities || [])];
+  return [...new Set(cities.filter(city => Object.hasOwn(locations, city)))];
 }
 
 function groupLabel(key) {
   if (key === 'all') return 'Все проекты';
   if (key === 'unknown') return 'Город не указан';
-  const [kind, city] = key.split(':');
-  return kind === 'program' ? 'nFactorial · ' + city : city;
+  return key;
 }
 
 function projectLocation(project) {
-  if (project.city) return project.city;
-  if (project.programCity) return 'nFactorial · ' + project.programCity;
-  return 'Город не указан';
+  return projectCities(project).join(', ') || 'Город не указан';
+}
+
+function matchesQuery(project, query) {
+  const text = [project.name, project.team, project.description, project.audience,
+    project.sector, projectLocation(project), ...(project.aliases || [])].join(' ').toLocaleLowerCase('ru');
+  return query.trim().toLocaleLowerCase('ru').split(/\s+/).every(word => text.includes(word));
 }
 
 function renderCatalog() {
-  const query = $('query').value.toLocaleLowerCase('ru').trim().split(/\s+/);
+  const query = $('query').value;
   const sector = $('sector').value;
   const city = $('city').value;
   const batch = $('batch').value;
   const filtered = projects.filter(project => {
-    const text = [project.name, project.team, project.description, project.audience,
-      project.sector, projectLocation(project)].join(' ').toLocaleLowerCase('ru');
-    return query.every(word => text.includes(word)) &&
+    return matchesQuery(project, query) &&
       (!sector || sector === project.sector) &&
-      (!city || city === groupKey(project)) &&
+      (!city || groups.get(city).includes(project)) &&
       (!batch || (batch === 'independent' ? project.kind === 'company' : String(project.batch) === batch));
   });
   const offset = (currentPage - 1) * pageSize;
@@ -117,45 +119,67 @@ function showProjects(event) {
 function selectMapGroup(key) {
   $('map-group').value = key;
   $('country-group').setAttribute('aria-pressed', String(key === 'unknown'));
-  const entries = groups.get(key);
+  const query = $('map-search').value;
+  const entries = groups.get(key).filter(project => matchesQuery(project, query));
   $('map-list').innerHTML = entries.map(project =>
     '<button class="map-item" data-id="' + escape(project.id) + '">' + logo(project) +
     '<span><b>' + escape(project.name) + '</b><small>' +
-    escape(project.batch ? 'nFactorial ' + project.batch + ' · ' + project.sector : project.sector) +
-    '</small></span><span aria-hidden="true">↗</span></button>').join('');
+    escape((project.batch ? 'nFactorial ' + project.batch : projectLocation(project)) + ' · ' + project.sector) +
+    '</small></span><span aria-hidden="true">↗</span></button>').join('') ||
+    '<p class="map-empty">Совпадений нет.</p>';
+  $('project-view-count').textContent = groupLabel(key) + ' · ' + entries.length;
+  $('project-grid').innerHTML = entries.map(project =>
+    '<button type="button" class="map-project" data-id="' + escape(project.id) +
+    '" title="' + escape(project.name + ' · ' + projectLocation(project)) +
+    '" aria-label="' + escape(project.name) + '">' + logo(project) + '</button>').join('');
+  $('project-grid').scrollTop = 0;
   $('map-list').scrollTop = 0;
   for (const marker of $('pins').children) {
     marker.setAttribute('aria-pressed', String(marker.dataset.group === key));
   }
 }
 
-function addMarker(key, count) {
-  if (key === 'all' || key === 'unknown') return;
-  const [kind, city] = key.split(':');
+function addMarker(city, count) {
+  if (city === 'all' || city === 'unknown') return;
   const [longitude, latitude] = locations[city];
   const x = 33 + (longitude - 46) * 14;
   const y = 35 + (56 - latitude) * 21;
   const marker = document.createElement('button');
-  marker.className = 'pin ' + kind;
-  marker.dataset.group = key;
+  marker.className = 'pin';
+  marker.dataset.group = city;
   marker.dataset.city = city;
   marker.style.left = x / 650 * 100 + '%';
   marker.style.top = y / 380 * 100 + '%';
   marker.innerHTML = '<span>' + count + '</span><b>' +
-    escape(kind === 'program' ? 'nFactorial' : city) + '</b>';
-  marker.setAttribute('aria-label', groupLabel(key) + ', проектов: ' + count);
-  marker.onclick = () => selectMapGroup(key);
+    escape(city) + '</b>';
+  marker.setAttribute('aria-label', city + ', проектов: ' + count);
+  marker.onclick = () => selectMapGroup(city);
   $('pins').append(marker);
 }
 
 $('reset').onclick = () => { clearFilters(); renderCatalog(); $('query').focus(); };
 $('cards').onclick = showProjects;
 $('map-list').onclick = showProjects;
+$('project-grid').onclick = showProjects;
+$('map-search').oninput = () => selectMapGroup($('map-group').value);
+function setMapView(showProjects) {
+  $('city-view').hidden = showProjects;
+  $('project-view').hidden = !showProjects;
+  $('view-cities').setAttribute('aria-pressed', String(!showProjects));
+  $('view-projects').setAttribute('aria-pressed', String(showProjects));
+}
+$('view-cities').onclick = () => setMapView(false);
+$('view-projects').onclick = () => {
+  if (!groups.has('all')) return;
+  selectMapGroup('all');
+  setMapView(true);
+};
 $('map-group').onchange = event => selectMapGroup(event.target.value);
 $('map-catalog').onclick = () => {
   const key = $('map-group').value;
   clearFilters();
   if (key !== 'all') $('city').value = key;
+  $('query').value = $('map-search').value;
   renderCatalog();
   $('catalog').scrollIntoView();
   $('query').focus({preventScroll: true});
@@ -172,7 +196,7 @@ $('pages').onclick = event => {
 for (const id of filterIds) $(id).addEventListener('input', () => { currentPage = 1; renderCatalog(); });
 
 function showAbout() {
-  openPanel('<h2 id="title">О проекте</h2><p>Атлас объединяет ИИ-компании казахстанской экосистемы и проекты nFactorial Incubator. Выпуск инкубатора указан в каждой архивной карточке.</p><p>Яркие отметки показывают города, связанные с командами. Синяя отметка в Алматы показывает место проведения инкубатора. Для остальных компаний используйте пункт «Город не указан» в списке карты.</p><p>Описание отражает данные в источнике. Сведения о текущей работе архивных проектов могут отсутствовать. Целевая аудитория указана по назначению продукта.</p><p>Границы карты предоставлены Natural Earth. Заявки на новые проекты проходят редакторскую проверку.</p>');
+  openPanel('<h2 id="title">О проекте</h2><p>Атлас объединяет ИИ-компании казахстанской экосистемы и проекты nFactorial Incubator. Выпуск инкубатора указан в каждой архивной карточке.</p><p>Отметки показывают города, связанные с командами, внедрениями или местом программы. Основание указано в карточке. Некоторые команды связаны с несколькими городами. В режиме «Все проекты» у каждой карточки есть собственная отметка.</p><p>Описание отражает данные в источнике. Сведения о текущей работе архивных проектов могут отсутствовать. Целевая аудитория указана по назначению продукта.</p><p>Границы карты предоставлены Natural Earth. Заявки на новые проекты проходят редакторскую проверку.</p>');
 }
 $('about').onclick = showAbout;
 $('about-footer').onclick = showAbout;
@@ -196,9 +220,11 @@ async function init() {
   projects = await response.json();
   groups.set('all', projects);
   for (const project of projects) {
-    const key = groupKey(project);
-    if (!groups.has(key)) groups.set(key, []);
-    groups.get(key).push(project);
+    const cities = projectCities(project);
+    for (const key of cities.length ? cities : ['unknown']) {
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key).push(project);
+    }
   }
   const mapKeys = [...groups.keys()].filter(key => key !== 'all')
     .sort((a, b) => b === 'unknown' ? -1 :
@@ -221,7 +247,7 @@ async function init() {
   $('batch').add(new Option('Компании и команды', 'independent'));
   const yearSet = new Set(projects.map(project => project.batch).filter(Boolean));
   for (const year of [...yearSet].sort((a, b) => b - a)) $('batch').add(new Option('nFactorial ' + year, year));
-  const cityCount = new Set(mapKeys.filter(key => key !== 'unknown').map(key => key.split(':')[1])).size;
+  const cityCount = mapKeys.filter(key => key !== 'unknown').length;
   $('stats').innerHTML = [
     [projects.length, 'проектов'], [cityCount, 'городов'], [yearSet.size, 'выпусков nFactorial'],
   ].map(([number, label]) => '<div><strong>' + number + '</strong><span>' + label + '</span></div>').join('');
