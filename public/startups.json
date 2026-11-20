@@ -603,7 +603,13 @@
     "logo": "logos/velnox.webp",
     "batch": 2026,
     "kind": "incubator",
-    "programCity": "Алматы"
+    "programCity": "Алматы",
+    "contacts": [
+      {
+        "label": "Запрос на сайте",
+        "url": "https://www.usevelnox.com/contact"
+      }
+    ]
   },
   {
     "id": "letmecook",
@@ -719,7 +725,13 @@
     "logo": "logos/hearless.webp",
     "batch": 2026,
     "kind": "incubator",
-    "programCity": "Алматы"
+    "programCity": "Алматы",
+    "contacts": [
+      {
+        "label": "Запрос на сайте",
+        "url": "https://hearless16-pcug.vercel.app/contact"
+      }
+    ]
   },
   {
     "id": "tokenolo",
@@ -771,6 +783,10 @@
       {
         "label": "Nurmukhamed Ashekey · LinkedIn",
         "url": "https://kz.linkedin.com/in/nurmukhamed-ashekey-3031a3369"
+      },
+      {
+        "label": "Компания · LinkedIn",
+        "url": "https://www.linkedin.com/company/otclickus/"
       }
     ]
   },
@@ -864,7 +880,13 @@
     "logo": "logos/carvin.webp",
     "batch": 2026,
     "kind": "incubator",
-    "programCity": "Алматы"
+    "programCity": "Алматы",
+    "contacts": [
+      {
+        "label": "Запрос на сайте",
+        "url": "https://carvin.app/contact"
+      }
+    ]
   },
   {
     "id": "lingopro",
@@ -887,7 +909,13 @@
     "logo": "logos/lingopro.webp",
     "batch": 2026,
     "kind": "incubator",
-    "programCity": "Алматы"
+    "programCity": "Алматы",
+    "contacts": [
+      {
+        "label": "Запрос на сайте",
+        "url": "https://lingopro-pi.vercel.app/contacts"
+      }
+    ]
   },
   {
     "id": "trendy",
@@ -933,7 +961,13 @@
     "logo": "logos/korvi.webp",
     "batch": 2026,
     "kind": "incubator",
-    "programCity": "Алматы"
+    "programCity": "Алматы",
+    "contacts": [
+      {
+        "label": "Рабочая почта",
+        "url": "mailto:hello@korvi.studio"
+      }
+    ]
   },
   {
     "id": "nf-2022-43",
@@ -4449,7 +4483,13 @@
     "logo": null,
     "batch": 2026,
     "kind": "incubator",
-    "programCity": "Алматы"
+    "programCity": "Алматы",
+    "contacts": [
+      {
+        "label": "Компания · LinkedIn",
+        "url": "https://linkedin.com/company/vivieclub/"
+      }
+    ]
   },
   {
     "id": "nf-2026-inc-30",
