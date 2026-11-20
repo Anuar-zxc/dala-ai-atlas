@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Редакция Dala Atlas</title>
+  <link rel="icon" href="/mark.svg">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/admin.css">
+  <script type="module" src="/admin.js"></script>
+</head>
+<body>
+  <header><div class="nav wrap"><a class="brand" href="/"><img src="/mark.svg" alt="">Dala<span>Atlas</span></a><a class="back-link" href="/">На сайт ↗</a><button class="bare" type="button" id="logout" hidden>Выйти</button></div></header>
+  <main class="wrap editorial">
+    <h1>Редакция атласа</h1>
+    <p class="admin-status" id="status" role="status">Проверяем доступ…</p>
+    <form class="login workspace-card" id="login" hidden>
+      <h2>Вход редактора</h2>
+      <label>Пароль<input name="password" type="password" autocomplete="current-password" maxlength="256" required></label>
+      <button class="submit">Войти</button>
+    </form>
+    <section id="workspace" hidden aria-label="Рабочее пространство редактора">
+      <div class="editor-toolbar">
+        <div class="editor-tabs" aria-label="Раздел редакции">
+          <button type="button" data-tab="pending" aria-pressed="true">Заявки <span id="pending-count"></span></button>
+          <button type="button" data-tab="catalog" aria-pressed="false">Каталог <span id="catalog-count"></span></button>
+          <button type="button" data-tab="reviewed" aria-pressed="false">Рассмотренные</button>
+        </div>
+        <div class="editor-actions"><button type="button" class="secondary" id="refresh">Обновить</button><button type="button" class="submit" id="create">＋ Новая карточка</button></div>
+      </div>
+      <div class="editor-shell">
+        <section class="workspace-card editor-list" aria-label="Проекты">
+          <label for="admin-search">Поиск по проектам</label>
+          <input id="admin-search" type="search" placeholder="Название, город или команда">
+          <div id="records"></div>
+          <button class="secondary" type="button" id="more" hidden>Ещё записи</button>
+        </section>
+        <section class="workspace-card editor-detail" id="detail" aria-label="Редактор карточки">
+          <h2>Выберите проект</h2>
+          <p>Откройте заявку или карточку из каталога.</p>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

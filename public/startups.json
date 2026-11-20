@@ -4,7 +4,7 @@
     "name": "PULS AI",
     "city": "Шымкент",
     "sector": "Медицина",
-    "description": "Проверяет медицинские записи и выписные эпикризы на соответствие клиническим протоколам и нормативным требованиям.",
+    "description": "PULS AI помогает врачу и службе контроля качества заметить пропуски и несоответствия до передачи медицинской документации. Комплекс анализирует записи и выписные эпикризы по протоколам и нормативным требованиям Казахстана. Проект прошёл пилот в Шымкенте и вышел на коммерческое внедрение.",
     "audience": "Поликлиники, больницы и службы контроля качества",
     "team": "Жамшид Арипов, Хуршид Арипов",
     "role": "Сооснователи Puls Systems",
@@ -21,6 +21,12 @@
     "aliases": [
       "Pulse AI",
       "Пульс ИИ"
+    ],
+    "contacts": [
+      {
+        "label": "Хуршид Арипов · LinkedIn",
+        "url": "https://kz.linkedin.com/in/khurshid-aripov-609b95224"
+      }
     ]
   },
   {
@@ -28,7 +34,7 @@
     "name": "QazTracker",
     "city": "Шымкент",
     "sector": "Промышленность",
-    "description": "Соединяет GPS-трекеры и камеры с компьютерным зрением, чтобы отслеживать скот и оценивать вес животных без ручного взвешивания.",
+    "description": "QazTracker объединяет мониторинг животных через GPS и компьютерное зрение. Трекеры показывают перемещения стада, а камеры QazTracker Vision помогают оценивать вес и отслеживать изменения без ручного взвешивания. Продукт рассчитан на фермы и откормочные площадки.",
     "audience": "Фермеры, животноводческие хозяйства и откормочные площадки",
     "team": "Динар Бенсеитов, Мирас Турсуналиев",
     "role": "Сооснователи",
@@ -44,6 +50,12 @@
     "aliases": [
       "Qaztrecker",
       "Казтрекер"
+    ],
+    "contacts": [
+      {
+        "label": "Динар Бенсеитов · LinkedIn",
+        "url": "https://kz.linkedin.com/in/dinar-benseitov-4b2002183"
+      }
     ]
   },
   {
@@ -51,7 +63,7 @@
     "name": "Alaqan",
     "city": "Астана",
     "sector": "Право и идентификация",
-    "description": "Распознаёт человека по рисунку вен ладони для контроля доступа и бесконтактных платежей.",
+    "description": "Alaqan разрабатывает сканеры и алгоритмы, которые идентифицируют человека по рисунку подкожных вен ладони. Система используется для бесконтактного доступа, учёта посещаемости и платежей. В Шымкенте решение пилотировали акимат, технопарк и школы.",
     "audience": "Школы, банки и организации с системами контроля доступа",
     "team": "Берик Нурымбетов, Александр Мосин, Канат Сарсенбаев, Айгазы Жунисбек",
     "role": "Сооснователи по интервью",
@@ -73,13 +85,27 @@
     "aliases": [
       "Алақан",
       "Алакан"
+    ],
+    "contacts": [
+      {
+        "label": "Партнёрства Alaqan Pay",
+        "url": "mailto:d.kairbaeva@alaqan.com"
+      },
+      {
+        "label": "Берик Нурымбетов · LinkedIn",
+        "url": "https://kz.linkedin.com/in/berik-nurymbetov"
+      },
+      {
+        "label": "Команда Alaqan",
+        "url": "mailto:info@alaqan.kz"
+      }
     ]
   },
   {
     "id": "higgsfield",
     "name": "Higgsfield",
     "sector": "Медиа",
-    "description": "Создаёт изображения и видео по сценарию и позволяет управлять движением камеры.",
+    "description": "Higgsfield объединяет генерацию изображений и видео с инструментами постановки кадра. Авторы задают движение камеры, подбирают эффекты и готовят короткие ролики или рекламные материалы. Для студий и корпоративных команд есть отдельное рабочее пространство.",
     "audience": "Креаторы, киностудии и рекламные агентства",
     "team": "Alex Mashrabov, Yerzat Dulat, Mahi De Silva",
     "role": "Сооснователи",
@@ -92,13 +118,27 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/higgsfield.webp",
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Корпоративный запрос",
+        "url": "https://higgsfield.ai/enterprise"
+      },
+      {
+        "label": "Yerzat Dulat · LinkedIn",
+        "url": "https://kz.linkedin.com/in/yerzat-dulat-96b149443"
+      },
+      {
+        "label": "Компания · LinkedIn",
+        "url": "https://www.linkedin.com/company/higgsfield"
+      }
+    ]
   },
   {
     "id": "cerebra",
     "name": "CEREBRA",
     "sector": "Медицина",
-    "description": "Анализирует бесконтрастные КТ-снимки головного мозга, помогая врачам распознавать признаки инсульта.",
+    "description": "CEREBRA анализирует бесконтрастные КТ-снимки головного мозга и помогает радиологам искать признаки инсульта. Продукт предназначен для больниц и инсультных центров, где важно быстро оценить снимки и передать результат клинической команде.",
     "audience": "Радиологи, инсультные центры и больницы",
     "team": "Doszhan Zhussupov",
     "role": "Основатель",
@@ -116,13 +156,27 @@
     "kind": "company",
     "alsoCities": [
       "Шымкент"
+    ],
+    "contacts": [
+      {
+        "label": "Рабочая почта",
+        "url": "mailto:info@cerebraai.ai"
+      },
+      {
+        "label": "Doszhan Zhussupov · LinkedIn",
+        "url": "https://www.linkedin.com/in/doszhan-zhussupov"
+      },
+      {
+        "label": "Компания · LinkedIn",
+        "url": "https://www.linkedin.com/company/cerebrai"
+      }
     ]
   },
   {
     "id": "parqour",
     "name": "Parqour",
     "sector": "Город и транспорт",
-    "description": "Распознаёт автомобильные номера, ведёт учёт парковочных сессий и объединяет оплату с аналитикой загрузки.",
+    "description": "Parqour использует распознавание автомобильных номеров для управления въездом, выездом и парковочными сессиями. Операторы получают оплату и данные о загрузке в одной системе. Типичные площадки — аэропорты, торговые центры и коммерческие парковки.",
     "audience": "Операторы парковок, аэропорты и торговые центры",
     "team": "Amirkhan Omarov",
     "role": "Основатель",
@@ -137,7 +191,21 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/parqour.webp",
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Amirkhan Omarov · LinkedIn",
+        "url": "https://www.linkedin.com/in/amirus"
+      },
+      {
+        "label": "Запрос на сайте",
+        "url": "https://www.parqour.com/contacts"
+      },
+      {
+        "label": "Компания · LinkedIn",
+        "url": "https://www.linkedin.com/company/parqour"
+      }
+    ]
   },
   {
     "id": "teriai",
@@ -162,7 +230,7 @@
     "name": "CortexAI",
     "city": "Кызылорда",
     "sector": "Медицина",
-    "description": "Разрабатывает систему поддержки клинических решений для оценки риска отторжения донорской почки.",
+    "description": "CortexAI разрабатывает систему поддержки решений при трансплантации почки. Модель оценивает клинические параметры, чтобы помочь команде оценить риск отторжения пересаженного органа. Проект проходит клиническую валидацию по информации основателя.",
     "audience": "Трансплантологи и профильные центры",
     "team": "Асылжан Абдуллаев",
     "role": "Основатель и CEO",
@@ -179,6 +247,12 @@
     "kind": "company",
     "alsoCities": [
       "Астана"
+    ],
+    "contacts": [
+      {
+        "label": "Асылжан Абдуллаев · LinkedIn",
+        "url": "https://kz.linkedin.com/in/assylzhan-abdullayev-15aab5343"
+      }
     ]
   },
   {
@@ -186,7 +260,7 @@
     "name": "aitomaton",
     "city": "Костанай",
     "sector": "Голос и поддержка",
-    "description": "Встраивает ИИ-агентов в обслуживание клиентов, продажи и коммуникации сотрудников.",
+    "description": "aitomaton объединяет ИИ-агентов и сотрудников в одном рабочем пространстве. Агенты отвечают на вопросы покупателей, сопровождают заявки и передают диалог менеджеру. Компания из Костаная предлагает продукт командам продаж и клиентского сервиса.",
     "audience": "Малый и средний бизнес",
     "team": "Нет сведений",
     "role": "Команда",
@@ -692,7 +766,13 @@
     "logo": "logos/otclick.webp",
     "batch": 2026,
     "kind": "incubator",
-    "programCity": "Алматы"
+    "programCity": "Алматы",
+    "contacts": [
+      {
+        "label": "Nurmukhamed Ashekey · LinkedIn",
+        "url": "https://kz.linkedin.com/in/nurmukhamed-ashekey-3031a3369"
+      }
+    ]
   },
   {
     "id": "hooked-ai",
@@ -4952,7 +5032,13 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/radar-phorm.webp",
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Запрос на сайте",
+        "url": "https://phorm.to/contact/"
+      }
+    ]
   },
   {
     "id": "radar-atlanti",
@@ -5045,7 +5131,13 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/radar-geometry.webp",
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Компания · LinkedIn",
+        "url": "https://www.linkedin.com/company/geometrykz"
+      }
+    ]
   },
   {
     "id": "radar-labhelp-me",
@@ -5083,14 +5175,20 @@
     },
     "checked": "2026-11-20",
     "logo": null,
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Компания · LinkedIn",
+        "url": "https://www.linkedin.com/company/ybr-wonk-ai"
+      }
+    ]
   },
   {
     "id": "radar-nace-ai",
     "name": "Nace.AI",
     "sector": "Финансы",
     "audience": "Пользователи финансовых инструментов",
-    "description": "Автоматизирует аудит и операции бэк-офиса через ИИ-агентов.",
+    "description": "Nace AI разрабатывает корпоративных агентов для финансового и операционного аудита. Первый продукт автоматизирует проверки бухгалтерских операций, счетов и потерь выручки. Его аудитория — финансовые службы и команды внутреннего контроля.",
     "team": "Дос Бакытжан, Жанибек Датбаев, Судха Валлуру",
     "role": "Команда по источнику",
     "stage": "Стадия не указана",
@@ -5102,7 +5200,17 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/radar-nace-ai.webp",
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Запрос на сайте",
+        "url": "https://www.nace.ai/contact?source=header"
+      },
+      {
+        "label": "Компания · LinkedIn",
+        "url": "https://www.linkedin.com/company/nace-ai"
+      }
+    ]
   },
   {
     "id": "radar-investbanq-paladigm",
@@ -5195,7 +5303,13 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/radar-wispy.webp",
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Рабочая почта",
+        "url": "mailto:info@wispylang.app"
+      }
+    ]
   },
   {
     "id": "radar-mineral-intelligence",
@@ -5271,7 +5385,13 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/radar-qdata.webp",
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Рабочая почта",
+        "url": "mailto:info@q-data.kz"
+      }
+    ]
   },
   {
     "id": "radar-protector-ai",
@@ -5290,7 +5410,17 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/radar-protector-ai.webp",
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Рабочая почта",
+        "url": "mailto:info@protectorai.kz"
+      },
+      {
+        "label": "Компания · LinkedIn",
+        "url": "https://www.linkedin.com/company/protectorai"
+      }
+    ]
   },
   {
     "id": "radar-aimris",
@@ -5563,7 +5693,7 @@
     "name": "Verigram",
     "sector": "Право и идентификация",
     "audience": "Юристы, организации и пользователи сервисов проверки",
-    "description": "Распознаёт документы и проверяет подлинность биометрического предъявления.",
+    "description": "Verigram проверяет подлинность документов и сопоставляет снимок с изображением владельца. Компании могут встроить удалённую верификацию в регистрацию клиентов. Решение рассчитано на банки, финтех, телеком и другие сервисы с требованиями KYC.",
     "team": "Улан Каражигитов",
     "role": "Команда по источнику",
     "stage": "Стадия не указана",
@@ -5575,14 +5705,24 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/radar-verigram.webp",
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Компания · LinkedIn",
+        "url": "https://ru.linkedin.com/company/verigram-ai"
+      },
+      {
+        "label": "Wahat Bastimiyev · LinkedIn",
+        "url": "https://sg.linkedin.com/in/uakhat"
+      }
+    ]
   },
   {
     "id": "radar-qalam-ai",
     "name": "Qalam AI",
     "sector": "Обучение",
     "audience": "Учащиеся и преподаватели",
-    "description": "Переносит рукописные записи в цифровой формат и помогает проверять решения.",
+    "description": "Qalam AI совмещает умную ручку и цифровую тетрадь. Система распознаёт рукописные записи, структурирует их в приложении и помогает проверять задания. Команда начала с образовательного сценария для школ, преподавателей и учеников.",
     "team": "Айнур Нурадил",
     "role": "Команда по источнику",
     "stage": "Приз зрителей Digital Qazaqstan Battle",
@@ -5595,7 +5735,13 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/radar-qalam-ai.webp",
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Компания · LinkedIn",
+        "url": "https://www.linkedin.com/company/qalam-ai-kz"
+      }
+    ]
   },
   {
     "id": "radar-edoox",
@@ -5658,7 +5804,7 @@
     "name": "PanDev Metrics",
     "sector": "Разработка",
     "audience": "Разработчики и технические команды",
-    "description": "Сводит данные о разработке для инженерных руководителей.",
+    "description": "PanDev Metrics собирает данные из инструментов разработки, чтобы показать, как задачи проходят путь от идеи до релиза. Руководители инженерных команд используют платформу для анализа сроков, загрузки и узких мест рабочего процесса.",
     "team": "Мадияр Бакбергенов, Артур Пан",
     "role": "Команда по источнику",
     "stage": "Стадия не указана",
@@ -5670,7 +5816,13 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/radar-pandev-metrics.webp",
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Компания · LinkedIn",
+        "url": "https://www.linkedin.com/company/pandev-metrics"
+      }
+    ]
   },
   {
     "id": "radar-aman",
@@ -5838,7 +5990,13 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/radar-deepinfra.webp",
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Компания · LinkedIn",
+        "url": "https://www.linkedin.com/company/deep-infra"
+      }
+    ]
   },
   {
     "id": "radar-leaping-ai",
@@ -5857,7 +6015,13 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/radar-leaping-ai.webp",
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Компания · LinkedIn",
+        "url": "https://www.linkedin.com/company/leaping-ai"
+      }
+    ]
   },
   {
     "id": "radar-aldente-ai",
@@ -5876,14 +6040,24 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/radar-aldente-ai.webp",
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Запрос на сайте",
+        "url": "https://aldenteai.com/demo"
+      },
+      {
+        "label": "Компания · LinkedIn",
+        "url": "https://www.linkedin.com/company/101904373"
+      }
+    ]
   },
   {
     "id": "radar-aidentis",
     "name": "Aidentis",
     "sector": "Медицина",
     "audience": "Пользователи цифровых сервисов здоровья и медицинские специалисты",
-    "description": "Помогает стоматологам разбирать снимки и трёхмерные исследования.",
+    "description": "AIDENTIS применяет компьютерное зрение к стоматологическим изображениям. Решение помогает врачам структурировать анализ рентгеновских снимков и трёхмерных исследований. Основная аудитория — стоматологи и клиники, работающие с цифровой диагностикой.",
     "team": "Асылзат Исатай, Жанибек Бокаев",
     "role": "Команда по источнику",
     "stage": "Стадия не указана",
@@ -5895,7 +6069,13 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/radar-aidentis.webp",
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Assylzat Issatayeva · LinkedIn",
+        "url": "https://kz.linkedin.com/in/assylzat-issatayeva-033982171"
+      }
+    ]
   },
   {
     "id": "radar-sergek",
@@ -5959,7 +6139,7 @@
     "name": "Armeta AI",
     "sector": "Проектирование",
     "audience": "Проектировщики и дизайнеры",
-    "description": "Автоматизирует проверку строительной проектно-сметной документации.",
+    "description": "Armeta AI помогает специалистам проверять проектно-сметную документацию и выявлять несоответствия в инженерных документах. Продукт ориентирован на строительные и проектные организации, которым нужно проверять большой объём чертежей и спецификаций.",
     "team": "Темирлан Рахметжанов, Санжар Рахметжанов, Нуралы Бактыгалиев",
     "role": "Команда по источнику",
     "stage": "Стадия не указана",
@@ -5971,7 +6151,17 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/radar-armeta-ai.webp",
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Запрос на сайте",
+        "url": "https://armeta.ai/demo/"
+      },
+      {
+        "label": "Компания · LinkedIn",
+        "url": "https://www.linkedin.com/company/armeta-ai"
+      }
+    ]
   },
   {
     "id": "radar-shai",
@@ -5990,14 +6180,28 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/radar-shai.webp",
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Компания · LinkedIn",
+        "url": "https://kz.linkedin.com/company/shai-pro-ai"
+      },
+      {
+        "label": "Запрос на сайте",
+        "url": "https://shai.pro/ru/contacts"
+      },
+      {
+        "label": "Рабочая почта",
+        "url": "mailto:info@shai.pro"
+      }
+    ]
   },
   {
     "id": "radar-nozomio",
     "name": "Nozomio",
     "sector": "Разработка",
     "audience": "Разработчики и технические команды",
-    "description": "Разрабатывает инструменты контекста и памяти для агентов.",
+    "description": "Nozomio разрабатывает продукты для памяти и контекста ИИ-агентов. Инструменты Nia и Folk работают с разными сценариями, от доступа к документации для разработчиков до персонального помощника, который сохраняет контекст задач.",
     "team": "Арлан Рахметжанов",
     "role": "Команда по источнику",
     "stage": "Стадия не указана",
@@ -6009,14 +6213,20 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/radar-nozomio.webp",
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Arlan Rakhmetzhanov · LinkedIn",
+        "url": "https://www.linkedin.com/in/arlan-rakhmetzhanov"
+      }
+    ]
   },
   {
     "id": "radar-biometric-vision",
     "name": "Biometric.vision",
     "sector": "Право и идентификация",
     "audience": "Юристы, организации и пользователи сервисов проверки",
-    "description": "Проверяет личность по лицу и выявляет подмену при онлайн-верификации.",
+    "description": "Biometric.vision помогает компаниям удалённо идентифицировать клиентов. Платформа использует машинное зрение для проверки лица и присутствия живого человека, а продукт можно встроить в сценарии регистрации финтеха, страховых и других организаций.",
     "team": "Алибек Наримбай",
     "role": "Команда по источнику",
     "stage": "Стадия не указана",
@@ -6028,14 +6238,24 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/radar-biometric-vision.webp",
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Компания · LinkedIn",
+        "url": "https://www.linkedin.com/company/biometricvision"
+      },
+      {
+        "label": "Запрос на сайте",
+        "url": "https://biometric.vision/book-demo"
+      }
+    ]
   },
   {
     "id": "radar-zebraeye",
     "name": "ZebraEye",
     "sector": "Медицина",
     "audience": "Пользователи цифровых сервисов здоровья и медицинские специалисты",
-    "description": "Использует томографию сетчатки для выявления заболеваний глаз.",
+    "description": "ZebraEye применяет компьютерное зрение к оптической когерентной томографии сетчатки. Система помогает врачам разбирать изображения глаз и замечать признаки заболеваний. Основатель сообщала о завершённых пилотах в Казахстане и поиске следующего рынка.",
     "team": "Яна Тен, Арман Оспанов, Досжан Жусупов",
     "role": "Команда по источнику",
     "stage": "Стадия не указана",
@@ -6047,7 +6267,13 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/radar-zebraeye.webp",
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Yana Ten · LinkedIn",
+        "url": "https://ae.linkedin.com/in/yana-ten"
+      }
+    ]
   },
   {
     "id": "radar-jobescape",
@@ -6066,7 +6292,13 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/radar-jobescape.webp",
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Запрос на сайте",
+        "url": "https://jobescape.me/contact"
+      }
+    ]
   },
   {
     "id": "radar-alma",
@@ -6085,7 +6317,17 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/radar-alma.webp",
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Запрос на сайте",
+        "url": "https://www.tryalma.com/contact-us"
+      },
+      {
+        "label": "Компания · LinkedIn",
+        "url": "https://www.linkedin.com/company/tryalma"
+      }
+    ]
   },
   {
     "id": "radar-kenesai",
@@ -6161,7 +6403,13 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/radar-defect-ai.webp",
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Компания · LinkedIn",
+        "url": "https://www.linkedin.com/company/retteai"
+      }
+    ]
   },
   {
     "id": "radar-qala-ai",
@@ -6187,7 +6435,7 @@
     "name": "TrustExam AI",
     "sector": "Обучение",
     "audience": "Учащиеся и преподаватели",
-    "description": "Автоматизирует наблюдение за проведением удалённых экзаменов.",
+    "description": "TrustExam.ai предоставляет инструменты удалённого прокторинга и проверки личности для экзаменов. Платформа помогает университетам, экзаменационным центрам и работодателям организовать тестирование и проверить события, требующие внимания наблюдателя.",
     "team": "Нурали Сарбакыш, Ерсултан Ерманов, Биржан Темиржан, Эдуард Заукарнаев",
     "role": "Команда по источнику",
     "stage": "Стадия не указана",
@@ -6199,7 +6447,21 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/radar-trustexam-ai.webp",
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Компания · LinkedIn",
+        "url": "https://kz.linkedin.com/company/trustexam"
+      },
+      {
+        "label": "Рабочая почта",
+        "url": "mailto:info@trustexam.ai"
+      },
+      {
+        "label": "Запрос на сайте",
+        "url": "https://trustexam.ai/contact"
+      }
+    ]
   },
   {
     "id": "radar-flection-ai",
@@ -6263,7 +6525,7 @@
     "name": "Perceptis",
     "sector": "Бизнес",
     "audience": "Бизнес-команды",
-    "description": "Собирает презентации для корпоративных команд.",
+    "description": "Perceptis превращает исходные материалы и рабочий контекст в презентации для деловых встреч. Инструмент помогает командам собирать слайды и выдерживать единый стиль в материалах для руководителей и клиентов.",
     "team": "Алибек Достияров, Ерсултан Сапар",
     "role": "Команда по источнику",
     "stage": "Стадия не указана",
@@ -6275,6 +6537,12 @@
     },
     "checked": "2026-11-20",
     "logo": "logos/radar-perceptis.webp",
-    "kind": "company"
+    "kind": "company",
+    "contacts": [
+      {
+        "label": "Компания · LinkedIn",
+        "url": "https://www.linkedin.com/company/perceptis-ai"
+      }
+    ]
   }
 ]

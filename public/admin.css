@@ -1,0 +1,44 @@
+.editorial { padding-block: clamp(24px, 5vw, 64px) }
+.editorial h1 { font-size: clamp(37px, 5vw, 65px); margin-bottom: 8px }
+.back-link { margin-left: auto; font-size: 14px; text-decoration: underline }
+.admin-status { min-height: 27px; margin-bottom: 8px; color: var(--muted) }
+.admin-status[data-error="true"], .detail-error { color: #9b2926; font-weight: 650 }
+.workspace-card { border: 1px solid var(--line); background: #fff; border-radius: 14px; padding: clamp(16px, 2vw, 25px); min-width: 0 }
+.workspace-card h2 { font-size: clamp(23px, 3vw, 34px); letter-spacing: -.045em; margin-bottom: 8px; overflow-wrap: anywhere }
+.login { max-width: 430px }
+.editor-toolbar, .editor-tabs, .editor-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px }
+.editor-toolbar { justify-content: space-between; margin-bottom: 14px }
+.editor-tabs { padding: 4px; border: 1px solid #cfdbd1; border-radius: 9px; background: #e9f0e7 }
+.editor-tabs button { min-height: 40px; border-radius: 6px; padding: 6px 10px; border: 0; font-size: 14px; font-weight: 650 }
+.editor-tabs button[aria-pressed="true"] { background: #fff; box-shadow: 0 1px 5px #19362b22 }
+.editor-tabs span:not(:empty) { margin-left: 4px; color: #445c53; font: 11px var(--mono) }
+.editor-shell { display: grid; grid-template-columns: minmax(230px, .75fr) minmax(0, 1.6fr); gap: 14px; align-items: start }
+.editor-list label { display: block; font-weight: 650; font-size: 14px }
+.editorial input, .editorial select, .editorial textarea { width: 100%; min-height: 44px; padding: 8px 10px; border: 1px solid #abbdb4; border-radius: 7px; font: inherit }
+#admin-search { margin: 6px 0 9px }
+.editor-list #records { max-height: 565px; overflow-y: auto; padding: 3px }
+.record { min-height: 55px; display: block; padding: 8px; border: 0; border-bottom: 1px solid #e2eae5; width: 100%; text-align: start }
+.record:hover, .record[aria-pressed="true"] { background: #ecf3e6 }
+.record b, .record small { display: block; overflow-wrap: anywhere }
+.record small { color: #52635e }
+.secondary { min-height: 44px; border: 1px solid #b6c6bd; background: #f9fbf8; border-radius: 8px; padding: 6px 11px; font-size: 14px; font-weight: 650 }
+#more { margin-top: 12px; width: 100% }
+.editor-detail .state { font: 12px var(--mono); color: #4c6259 }
+.editor-detail a { text-decoration: underline }
+.editor-detail .source-links { display: flex; flex-wrap: wrap; gap: 7px 13px; font-size: 13px; margin-block: 7px 13px }
+.editor-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 9px 12px }
+.editor-fields label { margin: 0 }
+.editor-fields .wide { grid-column: 1 / -1 }
+.editor-detail form { margin-top: 17px }
+.editor-detail .editor-actions { margin-top: 14px }
+.editor-detail .detail-error { margin-top: 10px }
+.editor-detail textarea { resize: vertical }
+.editorial button:disabled { opacity: .55; cursor: default }
+@media (max-width: 700px) {
+  .editor-shell { grid-template-columns: 1fr }
+  .editor-list #records { max-height: 230px }
+}
+@media (max-width: 430px) {
+  .editor-fields { grid-template-columns: 1fr }
+  .editor-tabs button { padding-inline: 7px }
+}

@@ -1,20 +1,12 @@
+import { locations, stages, stageOf, mergeCatalog } from './fields.js';
 const $ = id => document.getElementById(id);
 const escape = value => String(value).replace(/[&<>"']/g, char => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
 })[char]);
 
-const locations = {
-  'Актобе': [57.21, 50.28], 'Алматы': [76.89, 43.24], 'Астана': [71.43, 51.13],
-  'Атырау': [51.88, 47.11], 'Актау': [51.17, 43.65], 'Караганда': [73.09, 49.8],
-  'Костанай': [63.62, 53.21], 'Кокшетау': [69.38, 53.28], 'Кызылорда': [65.51, 44.85],
-  'Павлодар': [76.95, 52.29], 'Рудный': [63.12, 52.97], 'Семей': [80.23, 50.41],
-  'Талдыкорган': [78.37, 45.02], 'Тараз': [71.37, 42.9], 'Уральск': [51.37, 51.23],
-  'Усть-Каменогорск': [82.61, 49.95], 'Шымкент': [69.6, 42.32],
-  'Петропавловск': [69.15, 54.87], 'Конаев': [77.07, 43.88],
-  'Туркестан': [68.25, 43.30], 'Жезказган': [67.71, 47.78],
-};
+
 const dialog = $('dialog');
-const filterIds = ['query', 'sector', 'city', 'batch'];
+const filterIds = ['query', 'sector', 'city', 'stage', 'batch'];
 const pageSize = 18;
 let projects = [];
 let groups = new Map();
@@ -31,6 +23,9 @@ function logo(project) {
 function openPanel(html) {
   $('content').innerHTML = html;
   if (!dialog.open) dialog.showModal();
+  const title = $('title');
+  title.tabIndex = -1;
+  title.focus({ preventScroll: true });
   dialog.scrollTop = 0;
 }
 
@@ -39,22 +34,44 @@ dialog.addEventListener('click', event => {
   if (event.target === dialog && !dialog.matches(':hover')) dialog.close();
 });
 
+function externalLink(label, url, className = '') {
+  return '<a class="' + className + '" target="_blank" rel="noopener noreferrer" href="' +
+    escape(url) + '">' + escape(label) + ' <span aria-hidden="true">↗</span></a>';
+}
+
 function profile(project) {
+  const contacts = project.contacts || [];
+  const channelList = contacts.length ? '<div class="contact-grid">' +
+    contacts.map(({ label, url }) => externalLink(label, url, 'contact-link')).join('') + '</div>' :
+    '<p class="contact-empty">Публичный контакт не указан. Ссылки проекта доступны в источниках.</p>';
   const fields = [
     [project.role, project.team],
     ['Целевая аудитория', project.audience],
-    ['Стадия / статус', project.stage],
     ['География', project.geo],
-    ['Источники сверены', project.checked.split('-').reverse().join('.')],
   ];
-  openPanel(logo(project) + '<h2 id="title">' + escape(project.name) + '</h2><p>' +
-    escape(project.description) + '</p><span class="tag">' + escape(project.sector) +
-    '</span><dl>' + fields.map(([label, value]) =>
-      '<dt>' + escape(label) + '</dt><dd>' + escape(value) + '</dd>').join('') +
-    '</dl><strong>Ссылки и источники</strong><div class="links">' +
-    Object.entries(project.links).map(([label, url]) =>
-      '<a target="_blank" rel="noopener noreferrer" href="' + escape(url) + '">' +
-      escape(label) + ' ↗</a>').join('') + '</div>');
+  openPanel('<div class="profile-heading">' + logo(project) + '<div><div class="eyebrow">' +
+    escape(projectLocation(project)) + '</div><h2 id="title">' + escape(project.name) +
+    '</h2></div></div><div class="profile-tags"><span class="tag">' + escape(project.sector) +
+    '</span><span class="tag stage-tag">' + escape(project.stage) + '</span></div>' +
+    '<section class="profile-section"><h3>О продукте</h3><p>' + escape(project.description) +
+    '</p></section><dl>' + fields.map(([label, value]) =>
+    '<dt>' + escape(label) + '</dt><dd>' + escape(value) + '</dd>').join('') + '</dl>' +
+    '<section class="contact-section"><h3>Связаться с командой</h3>' + channelList + '</section>' +
+    '<details class="profile-sources"><summary>Ссылки и источники</summary><div class="links">' +
+    Object.entries(project.links).map(([label, url]) => externalLink(label, url)).join('') +
+    '</div><small>Сверено ' + escape(project.checked.split('-').reverse().join('.')) +
+    '</small></details><button type="button" class="bare profile-share" id="profile-share">Скопировать ссылку</button>' +
+    '<span role="status" id="share-status"></span>');
+  $('profile-share').onclick = async () => {
+    const url = new URL('/', location.origin);
+    url.searchParams.set('project', project.id);
+    try {
+      await navigator.clipboard.writeText(url.href);
+      $('share-status').textContent = 'Ссылка скопирована.';
+    } catch {
+      $('share-status').textContent = url.href;
+    }
+  };
 }
 
 function projectCities(project) {
@@ -83,10 +100,13 @@ function renderCatalog() {
   const sector = $('sector').value;
   const city = $('city').value;
   const batch = $('batch').value;
+  const stage = $('stage').value;
   const filtered = projects.filter(project => {
     return matchesQuery(project, query) &&
       (!sector || sector === project.sector) &&
       (!city || groups.get(city).includes(project)) &&
+      (!stage || stage === stageOf(project)) &&
+      (!$('contacts-only').checked || project.contacts?.length) &&
       (!batch || (batch === 'independent' ? project.kind === 'company' : String(project.batch) === batch));
   });
   const offset = (currentPage - 1) * pageSize;
@@ -94,11 +114,12 @@ function renderCatalog() {
     '<button class="card" data-id="' + escape(project.id) + '"><span class="cardtop">' + logo(project) +
     '<span class="tag">' + escape(project.sector) + '</span></span><h3>' + escape(project.name) +
     '</h3><p>' + escape(project.description) + '</p><span class="cardfoot"><span>' +
-    escape(project.batch ? 'nFactorial ' + project.batch : projectLocation(project)) +
+    escape([project.batch ? 'nFactorial ' + project.batch : projectLocation(project),
+      stageOf(project) === 'mvp' ? 'MVP' : '', project.contacts?.length ? 'Контакт' : ''].filter(Boolean).join(' · ')) +
     '</span><span aria-hidden="true">↗</span></span></button>').join('') ||
     '<p class="empty">Совпадений нет. Измените запрос или сбросьте фильтры.</p>';
   $('count').textContent = 'Найдено: ' + filtered.length + ' из ' + projects.length;
-  $('reset').hidden = !filterIds.some(id => $(id).value);
+  $('reset').hidden = !$('contacts-only').checked && !filterIds.some(id => $(id).value);
   const pages = Math.ceil(filtered.length / pageSize);
   $('pages').innerHTML = pages > 1 ? '<button data-step="-1" ' +
     (currentPage === 1 ? 'disabled' : '') + '>← Назад</button><span>' + currentPage + ' / ' +
@@ -108,6 +129,7 @@ function renderCatalog() {
 
 function clearFilters() {
   for (const id of filterIds) $(id).value = '';
+  $('contacts-only').checked = false;
   currentPage = 1;
 }
 
@@ -193,31 +215,80 @@ $('pages').onclick = event => {
   $('catalog-title').setAttribute('tabindex', '-1');
   $('catalog-title').focus({preventScroll: true});
 };
-for (const id of filterIds) $(id).addEventListener('input', () => { currentPage = 1; renderCatalog(); });
+for (const id of [...filterIds, 'contacts-only']) $(id).addEventListener('input', () => { currentPage = 1; renderCatalog(); });
 
 function showAbout() {
   openPanel('<h2 id="title">О проекте</h2><p>Атлас объединяет ИИ-компании казахстанской экосистемы и проекты nFactorial Incubator. Выпуск инкубатора указан в каждой архивной карточке.</p><p>Отметки показывают города, связанные с командами, внедрениями или местом программы. Основание указано в карточке. Некоторые команды связаны с несколькими городами. В режиме «Все проекты» у каждой карточки есть собственная отметка.</p><p>Описание отражает данные в источнике. Сведения о текущей работе архивных проектов могут отсутствовать. Целевая аудитория указана по назначению продукта.</p><p>Границы карты предоставлены Natural Earth. Заявки на новые проекты проходят редакторскую проверку.</p>');
 }
 $('about').onclick = showAbout;
 $('about-footer').onclick = showAbout;
-const inputs = [['name','Название стартапа',100],['url','Публичная ссылка на проект',350],['sector','Сфера',100],['team','Основатели и роли',350],['description','Что делает продукт и как использует ИИ?',1200],['audience','Для кого создан продукт?',400],['geo','Как проект связан с Казахстаном? Укажите город, если известен.',350],['stage','Стадия проекта',120]];
-$('add').onclick=()=>{
-  openPanel('<div class="eyebrow">DALA ATLAS</div><h2 id="title">Добавить стартап</h2><p>Расскажите о команде. После проверки по публичным источникам редактор добавит карточку в атлас.</p><form>'+inputs.map(([k,label,max])=>'<label>'+label+(k==='stage'?' (необязательно)':'')+(k==='description'?'<textarea rows="3"':'<input type="'+(k==='url'?'url':'text')+'"')+' name="'+k+'" maxlength="'+max+'" '+(k==='stage'?'':'required')+'>'+(k==='description'?'</textarea>':'')+'</label>').join('')+'<button class="submit">Отправить на проверку</button><p id="feedback" role="status"></p></form>');
-  const form=$('content').querySelector('form');
-  form.onsubmit=async e=>{
-    e.preventDefault(); const btn=form.querySelector('button');btn.disabled=true; $('feedback').textContent='Сохранение…';
+const fields = [
+  ['name', 'Название', 100, 'text'], ['url', 'Ссылка на MVP, продукт или демо', 350, 'url'],
+  ['sector', 'Сфера', 100, 'text'], ['team', 'Основатели и роли', 350, 'text'],
+  ['description', 'Что делает продукт и как он использует ИИ?', 1200, 'textarea'],
+  ['audience', 'Для кого создан продукт?', 400, 'text'],
+  ['geo', 'Связь с Казахстаном и её подтверждение', 350, 'text'],
+];
+const contactFields = [
+  ['founderLinkedIn', 'LinkedIn основателя', 350, 'url'],
+  ['companyLinkedIn', 'LinkedIn компании', 350, 'url'],
+  ['contactUrl', 'Страница для связи', 350, 'url'],
+  ['contactEmail', 'Рабочая почта', 150, 'email'],
+];
+const fieldInput = ([key, label, max, type], required) => '<label>' + escape(label) +
+  (type === 'textarea' ? '<textarea rows="3"' : '<input type="' + type + '"') +
+  ' name="' + key + '" maxlength="' + max + '"' + (required ? ' required' : '') + '>' +
+  (type === 'textarea' ? '</textarea>' : '') + '</label>';
+
+$('add').onclick = () => {
+  const cities = Object.keys(locations).sort((a, b) => a.localeCompare(b, 'ru'));
+  openPanel('<h2 id="title">Добавить стартап</h2><p>Можно отправить заявку с MVP. Редактор проверит описание, стадию и публичные ссылки.</p>' +
+    '<form>' + fields.slice(0, 2).map(field => fieldInput(field, true)).join('') +
+    '<div class="form-pair"><label>Стадия<select name="stageKey" required><option value="">Выберите стадию</option>' +
+    Object.entries(stages).map(([key, label]) => '<option value="' + key + '">' + label + '</option>').join('') +
+    '</select></label><label>Город<select name="city"><option value="">Город не указан</option>' +
+    cities.map(city => '<option>' + escape(city) + '</option>').join('') + '</select></label></div>' +
+    fields.slice(2).map(field => fieldInput(field, true)).join('') +
+    '<details class="submission-contacts"><summary>Контакты команды · необязательно</summary>' +
+    contactFields.map(field => fieldInput(field, false)).join('') + '</details>' +
+    '<label class="contact-consent"><input type="checkbox" name="publicContacts" required>' +
+    'Подтверждаю, что сведения и контакты можно опубликовать.</label>' +
+    '<button class="submit">Отправить на проверку</button><p id="feedback" role="status"></p></form>');
+  const form = $('content').querySelector('form');
+  const feedback = $('feedback');
+  form.onsubmit = async event => {
+    event.preventDefault();
+    const button = form.querySelector('button');
+    button.disabled = true;
+    feedback.textContent = 'Отправляем заявку…';
     try {
-      const res=await fetch('/api/submissions',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(form)))});
-      if(!res.ok) throw Error(res.status===400?'Проверьте поля и публичную ссылку.':'Сохранение не удалось. Попробуйте ещё раз.');
-      openPanel('<div class="eyebrow">ЗАЯВКА СОХРАНЕНА</div><h2 id="title">Спасибо за проект!</h2><p>Редактор проверит сведения перед публикацией.</p>');
-    } catch(err) { $('feedback').textContent=err.message;btn.disabled=false; }
+      const data = Object.fromEntries(new FormData(form));
+      data.publicContacts = data.publicContacts === 'on';
+      const response = await fetch('/api/submissions', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data),
+      });
+      if (!response.ok) {
+        const error = await response.json().catch(() => ({}));
+        throw Error(error.error || 'Заявка не сохранилась. Попробуйте ещё раз.');
+      }
+      if (dialog.open && form.isConnected) {
+        openPanel('<h2 id="title">Заявка на проверке</h2><p>После проверки редактор сможет опубликовать карточку на карте.</p>');
+      }
+    } catch (error) {
+      feedback.textContent = error.message;
+    } finally {
+      button.disabled = false;
+    }
   };
 };
 
 async function init() {
-  const response = await fetch('/startups.json');
+  const [response, updates] = await Promise.all([
+    fetch('/startups.json'),
+    fetch('/api/catalog').then(result => result.ok ? result.json() : {}).catch(() => ({})),
+  ]);
   if (!response.ok) throw Error('Каталог недоступен');
-  projects = await response.json();
+  projects = mergeCatalog(await response.json(), updates);
   groups.set('all', projects);
   for (const project of projects) {
     const cities = projectCities(project);
@@ -244,6 +315,7 @@ async function init() {
   }
   const sectors = [...new Set(projects.map(project => project.sector))].sort((a, b) => a.localeCompare(b, 'ru'));
   for (const sector of sectors) $('sector').add(new Option(sector, sector));
+  for (const [key, label] of Object.entries(stages)) $('stage').add(new Option(label, key));
   $('batch').add(new Option('Компании и команды', 'independent'));
   const yearSet = new Set(projects.map(project => project.batch).filter(Boolean));
   for (const year of [...yearSet].sort((a, b) => b - a)) $('batch').add(new Option('nFactorial ' + year, year));
@@ -253,6 +325,9 @@ async function init() {
   ].map(([number, label]) => '<div><strong>' + number + '</strong><span>' + label + '</span></div>').join('');
   selectMapGroup('all');
   renderCatalog();
+  const sharedId = new URLSearchParams(location.search).get('project');
+  const shared = projects.find(project => project.id === sharedId);
+  if (shared) profile(shared);
 }
 
 init().catch(() => {

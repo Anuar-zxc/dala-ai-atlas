@@ -24,7 +24,7 @@
       <div>
         <div class="eyebrow"><i></i> КАЗАХСТАН / ИИ-ЭКОСИСТЕМА</div>
         <h1>Атлас ИИ-стартапов</h1>
-        <p>Компании и проекты инкубатора на одной карте.</p>
+        <p>Найдите ИИ-команду для пилота, партнёрства или инвестиций.</p>
       </div>
       <div class="atlas-stats" id="stats" aria-label="Статистика каталога"></div>
     </div>
@@ -58,14 +58,18 @@
         <label class="search"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 5 5"/></svg><input type="search" id="query" aria-label="Поиск по каталогу" placeholder="Название, команда или продукт"></label>
         <select id="sector" aria-label="Сфера"><option value="">Все сферы</option></select>
         <select id="city" aria-label="География"><option value="">Вся география</option></select>
+        <select id="stage" aria-label="Стадия"><option value="">Все стадии</option></select>
         <select id="batch" aria-label="Выпуск"><option value="">Все выпуски</option></select>
       </div>
-      <button id="reset" class="bare" hidden>Сбросить фильтры ×</button>
+      <div class="catalog-actions">
+        <label class="contacts-filter"><input type="checkbox" id="contacts-only"> Есть контакт команды</label>
+        <button id="reset" class="bare" hidden>Сбросить фильтры ×</button>
+      </div>
       <div class="grid" id="cards"></div>
       <div class="pages" id="pages" aria-label="Страницы каталога"></div>
     </section>
   </main>
-  <footer class="wrap"><b>Dala Atlas</b><button class="bare" id="about-footer">О проекте и источниках</button><a href="#map">К карте ↑</a></footer>
+  <footer class="wrap"><b>Dala Atlas</b><button class="bare" id="about-footer">О проекте и источниках</button><a href="/admin.html">Редакция</a><a href="#map">К карте ↑</a></footer>
   <dialog id="dialog" aria-labelledby="title"><button class="close" aria-label="Закрыть">×</button><div id="content"></div></dialog>
 </body>
 </html>
