@@ -50,10 +50,11 @@
     "links": {
       "LinkedIn": "https://www.linkedin.com/company/parqour",
       "Основатель": "https://www.linkedin.com/in/amirus",
-      "Команда в Алматы": "https://kz.linkedin.com/jobs/view/3674996275"
+      "Команда в Алматы": "https://kz.linkedin.com/jobs/view/3674996275",
+      "Сайт": "https://www.parqour.com/"
     },
     "checked": "2026-11-20",
-    "logo": null
+    "logo": "logos/parqour.webp"
   },
   {
     "id": "amplify",
@@ -300,7 +301,7 @@
       "Страница проекта": "https://drive.google.com/drive/folders/1cANti7d1Q7t7FfonL5GilOAEABLRUeaN?usp=share_link"
     },
     "checked": "2026-11-20",
-    "logo": null
+    "logo": "logos/linai.webp"
   },
   {
     "id": "carvin",
