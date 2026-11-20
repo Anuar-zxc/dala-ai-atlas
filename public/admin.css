@@ -42,3 +42,14 @@
   .editor-fields { grid-template-columns: 1fr }
   .editor-tabs button { padding-inline: 7px }
 }
+
+.editorial h1 { font-weight: 650; letter-spacing: -.06em }
+.workspace-card { border-radius: 17px; box-shadow: var(--surface-shadow) }
+.login { margin-top: 18px; border-top: 4px solid var(--atlas-green) }
+.login .submit { width: 100%; margin-top: 8px }
+.editor-tabs { border-radius: 23px; background: #edf2e9 }
+.editor-tabs button { border-radius: 19px }
+.editor-tabs button[aria-pressed="true"] { background: #12483d; color: #fff }
+.editor-tabs button[aria-pressed="true"] span { color: var(--lime) }
+.editor-toolbar { margin-block: 18px }
+.record[aria-pressed="true"] { box-shadow: inset 3px 0 var(--atlas-green) }

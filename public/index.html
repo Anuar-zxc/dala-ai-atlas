@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#121f22">
+  <meta name="theme-color" content="#083333">
   <meta name="description" content="Интерактивная карта ИИ-компаний и проектов Казахстана. Поиск по компаниям, сферам, городам и выпускам nFactorial Incubator.">
   <title>Dala Atlas — карта ИИ-экосистемы Казахстана</title>
   <link rel="icon" href="/mark.svg">
@@ -20,14 +20,16 @@
     </div>
   </header>
   <main class="wrap">
-    <div class="intro">
-      <div>
-        <div class="eyebrow"><i></i> КАЗАХСТАН / ИИ-ЭКОСИСТЕМА</div>
-        <h1>Атлас ИИ-стартапов</h1>
-        <p>Найдите ИИ-команду для пилота, партнёрства или инвестиций.</p>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-art" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <h1 id="hero-title">Атлас ИИ-стартапов<br><em>Казахстана</em></h1>
+        <p>Найдите команду для пилота, партнёрства или инвестиций.</p>
+        <a class="hero-link" href="#catalog">Найти стартап <span aria-hidden="true">↗</span></a>
       </div>
-      <div class="atlas-stats" id="stats" aria-label="Статистика каталога"></div>
-    </div>
+      <span class="terrain-caption">43°05′ N &nbsp; 77°06′ E <b>Заилийский Алатау</b></span>
+    </section>
+    <div class="map-intro"><h2>Карта экосистемы</h2><div class="atlas-stats" id="stats" aria-label="Статистика каталога"></div></div>
     <section class="atlas" id="map" aria-label="Интерактивная карта проектов">
       <div class="atlas-map">
         <div class="map-modes" aria-label="Вид карты">
@@ -35,7 +37,7 @@
           <button type="button" id="view-projects" aria-pressed="false" aria-controls="project-view">Все проекты</button>
         </div>
         <div id="city-view">
-        <div class="map-heading"><div><span class="coordinates">48° N / 68° E</span><h2>Казахстан</h2></div><span class="north" aria-label="Север">↑ N</span></div>
+        <div class="map-heading"><span class="coordinates">48° N / 68° E</span><span class="north" aria-label="Север">↑ N</span></div>
         <div class="map-frame"><img src="/map.svg" alt="Контурная карта Казахстана и соседних стран"><div class="pins" id="pins"></div></div>
         <div class="map-key"><span><i></i> Проекты, связанные с городом</span><button class="country-group" id="country-group" hidden></button></div>
         </div>

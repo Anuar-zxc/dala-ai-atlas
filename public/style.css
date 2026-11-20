@@ -234,3 +234,112 @@ footer a:last-child { margin-left: auto }
 .contacts-filter input { width: 17px; height: 17px; accent-color: #42642f }
 .catalog-actions #reset { margin: 0 }
 .card p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden }
+
+@font-face {
+  font-family: Manrope;
+  src: url('/fonts/manrope.woff2') format('woff2');
+  font-weight: 200 800;
+  font-display: swap;
+}
+:root {
+  --ink: #132e2d;
+  --muted: #51635f;
+  --line: #d7dfd8;
+  --paper: #f8f8f3;
+  --lime: #dcfb82;
+  --atlas-green: #07544c;
+  --surface-shadow: 0 2px 4px #153c3010, 0 14px 32px -28px #153c304d;
+  --sans: Manrope, Arial, sans-serif;
+}
+body { font-family: var(--sans) }
+header { background: var(--paper) }
+.nav { min-height: 72px }
+.brand { font-weight: 800 }
+.brand img { border-radius: 10px }
+nav { margin-inline: auto; gap: 30px }
+nav a, nav button { color: #465a53 }
+.add { margin-left: 0; border-radius: 30px; background: #113d36; padding-inline: 18px }
+.add:hover, .submit:hover { background: #155448 }
+.hero {
+  isolation: isolate; position: relative; overflow: hidden; margin-top: 22px;
+  color: #fff; border-radius: 24px; background: #082e32;
+  padding: clamp(28px, 3.9vw, 61px); min-height: 300px; display: grid; align-items: center;
+}
+.hero-art {
+  position: absolute; z-index: -1; inset: 0 0 0 30%;
+  background: url('/relief.webp') center 53% / cover no-repeat,
+    radial-gradient(ellipse at 62% 40%, #196963, transparent 63%), #082e32;
+  mask-image: linear-gradient(90deg, transparent, black 33%);
+}
+.hero-copy { max-width: 68% }
+.hero h1 { margin: 0; font-size: clamp(37px, 4.65vw, 74px); font-weight: 620; letter-spacing: -.068em; line-height: 1.08 }
+.hero h1 em { font-family: Georgia, serif; font-size: 1.09em; font-weight: 400; letter-spacing: -.057em; color: var(--lime) }
+.hero p { margin: 16px 0 21px; max-width: 390px; color: #e3eee7; text-wrap: pretty; font-size: 15px }
+.hero-link { display: inline-flex; gap: 22px; align-items: center; min-height: 44px; padding: 8px 18px; border-radius: 24px; color: var(--ink); background: var(--lime); font-weight: 750; font-size: 14px }
+.hero-link:hover { background: #efffb9 }
+.terrain-caption { position: absolute; right: 24px; bottom: 18px; padding: 4px 8px; border-radius: 5px; background: #082e32e6; color: #c6e8d8; font: 10px/1.6 var(--mono); letter-spacing: .045em }
+.terrain-caption b { display: block; font: 600 12px var(--sans); color: #fff }
+.terrain-source { text-decoration: underline }
+.map-intro { display: flex; justify-content: space-between; gap: 18px; align-items: center; margin: 32px 0 15px }
+.map-intro h2, .sectionhead h2 { font-size: clamp(25px, 2.8vw, 42px); font-weight: 690; line-height: 1.15; letter-spacing: -.055em }
+.atlas-stats { padding: 0 }
+.atlas-stats strong { font: 650 clamp(21px, 2vw, 32px)/1 var(--sans); letter-spacing: -.055em }
+.atlas-stats span { margin-top: 3px; font-size: 11px }
+.atlas { border: 1px solid #bbc9be; border-radius: 18px; box-shadow: var(--surface-shadow) }
+.map-directory { background: #fff; color: var(--ink); border-color: var(--line); gap: 10px }
+.map-directory label { font-size: 19px; letter-spacing: -.045em }
+.map-directory select, #map-search { color-scheme: light; color: var(--ink); background: #f6f8f4; border-color: #c6d2c9 }
+#map-search::placeholder { color: var(--muted) }
+.map-list { scrollbar-color: #b1c3b6 #fff }
+.map-item { color: var(--ink); border-color: var(--line); padding-block: 9px }
+.map-item:hover, .map-item:focus-visible { background: #eff5ec }
+.map-item small, .map-empty { color: var(--muted) }
+.map-item > span:last-child { color: var(--atlas-green) }
+.map-catalog, .submit { background: #12483d; color: white; border-radius: 9px }
+.map-catalog:hover { background: #08614e }
+.map-modes { border-radius: 24px }
+.map-modes button { border-radius: 20px }
+.directory { padding-block: clamp(36px, 5vw, 76px) }
+.sectionhead { justify-content: space-between; align-items: center }
+.filters { margin: 19px 0 8px }
+.filters select, .search, .contacts-filter { border-color: #cbd5ca }
+.grid { gap: 14px }
+.card { padding: clamp(16px, 1.7vw, 25px); border-radius: 16px; border-color: var(--line); box-shadow: var(--surface-shadow) }
+.card:hover { border-color: #80a591; box-shadow: 0 10px 26px #153c3015 }
+.tag { border-radius: 25px; padding-inline: 10px; background: #edf4e2; color: #395932 }
+.stage-tag { background: #e4f0ed; color: #22584e }
+.card h3 { margin-top: 20px; font-weight: 750; font-size: 23px }
+.card p { line-height: 1.6 }
+.cardfoot { padding-top: 12px; font: 550 12px var(--sans) }
+.cardfoot span:last-child { display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; width: 27px; height: 27px; flex-shrink: 0; color: var(--atlas-green) }
+dialog { width: min(590px, 95vw); border-radius: 20px; padding: clamp(20px, 3vw, 36px); box-shadow: 0 18px 90px #061f2545 }
+dialog::backdrop { background: #102725a8; backdrop-filter: blur(4px) }
+.contact-section { background: #f0f6e8; padding: 17px; border-radius: 12px }
+.profile-heading h2 { font-size: clamp(26px,4vw,38px) }
+footer.wrap { flex-wrap: wrap; padding-block: 12px }
+@media (max-width: 690px) {
+  .nav { min-height: 60px }
+  .add { margin-left: auto; padding-inline: 12px }
+  .hero { min-height: 330px; align-items: start; margin-top: 12px; padding: 23px 20px; border-radius: 18px }
+  .hero-copy { max-width: 100% }
+  .hero-art { inset: 37% -15% -10% 0; mask-image: linear-gradient(180deg,transparent,black 37%) }
+  .hero h1 { font-size: clamp(32px, 7.8vw, 44px) }
+  .hero p { margin: 11px 0 14px; max-width: 290px; font-size: 14px }
+  .terrain-caption { right: 10px; bottom: 10px; font-size: 8px }
+  .terrain-caption b { font-size: 10px }
+  .map-intro { display: grid; margin: 24px 0 12px; gap: 14px }
+  .atlas-stats { grid-auto-columns: max-content; gap: 14px }
+  .atlas-stats div { min-width: 0; padding-left: 10px }
+  .atlas-stats div:first-child { padding: 0; border: none }
+  .map-directory { padding: 15px }
+  .grid { grid-template-columns: 1fr }
+  .card h3 { margin-top: 13px }
+  .sectionhead { align-items: start }
+  footer.wrap { gap: 5px 14px }
+}
+.map-heading { inset: 13px 18px auto auto; align-items: center; gap: 9px }
+.hero h1 { letter-spacing: -.055em }
+@media (max-width: 690px) {
+  .map-heading { inset: 13px 13px auto auto }
+  .map-heading .coordinates { display: none }
+}
