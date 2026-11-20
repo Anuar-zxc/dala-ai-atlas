@@ -1,4 +1,5 @@
 import { createHash, createHmac, timingSafeEqual } from 'node:crypto';
+import { BlobPreconditionFailedError } from '@vercel/blob';
 import baseline from '../public/startups.json' with { type: 'json' };
 import { editorialState, readJson, readSubmissions, saveEditorial } from '../lib/atlas-storage.js';
 import { isJson, sameOrigin, validateEntry, webUrl } from '../lib/validation.js';
@@ -114,7 +115,7 @@ export default async function handler(req, res) {
     try {
       await saveEditorial(value, etag);
     } catch (error) {
-      if (error.name === 'BlobPreconditionFailedError' || (!etag && (await editorialState()).etag)) {
+      if (error instanceof BlobPreconditionFailedError || (!etag && (await editorialState()).etag)) {
         return res.status(409).json({ error: 'Каталог изменился. Обновите редакцию перед сохранением.' });
       }
       throw error;
